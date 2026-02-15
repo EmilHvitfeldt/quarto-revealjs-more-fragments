@@ -78,14 +78,15 @@
     rotateOutUpRight: 'rotateInUpRight',
 
     // Sliding animations
-    slideInDown: 'slideOutDown',
+    // Sliding animations (reverse direction: exit the way it came in)
+    slideInDown: 'slideOutUp',
     slideInLeft: 'slideOutLeft',
     slideInRight: 'slideOutRight',
-    slideInUp: 'slideOutUp',
-    slideOutDown: 'slideInDown',
+    slideInUp: 'slideOutDown',
+    slideOutDown: 'slideInUp',
     slideOutLeft: 'slideInLeft',
     slideOutRight: 'slideInRight',
-    slideOutUp: 'slideInUp',
+    slideOutUp: 'slideInDown',
 
     // Zooming animations
     zoomIn: 'zoomOut',

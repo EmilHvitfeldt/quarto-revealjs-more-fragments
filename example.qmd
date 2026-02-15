@@ -375,6 +375,50 @@ rotateOutUpRight
 :::
 ::::
 
+## Sliding Animations
+
+:::: {.columns}
+::: {.column width="50%"}
+**Entrances**
+
+::: {.fragment .slideInDown}
+slideInDown
+:::
+
+::: {.fragment .slideInLeft}
+slideInLeft
+:::
+
+::: {.fragment .slideInRight}
+slideInRight
+:::
+
+::: {.fragment .slideInUp}
+slideInUp
+:::
+:::
+
+::: {.column width="50%"}
+**Exits**
+
+::: {.fragment .slideOutDown}
+slideOutDown
+:::
+
+::: {.fragment .slideOutLeft}
+slideOutLeft
+:::
+
+::: {.fragment .slideOutRight}
+slideOutRight
+:::
+
+::: {.fragment .slideOutUp}
+slideOutUp
+:::
+:::
+::::
+
 ## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.

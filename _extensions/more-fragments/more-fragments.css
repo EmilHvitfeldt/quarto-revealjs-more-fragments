@@ -489,3 +489,49 @@
 .reveal .slides section .fragment.rotateOutUpRight.visible {
   opacity: 0;
 }
+
+/* ==========================================================================
+   Phase 9: Sliding Animations (Entrance/Exit Pairs)
+   Animation names are controlled by JavaScript for proper forward/reverse handling
+   ========================================================================== */
+
+/* Sliding Entrances */
+.reveal .slides section span.fragment.slideInDown,
+.reveal .slides section span.fragment.slideInLeft,
+.reveal .slides section span.fragment.slideInRight,
+.reveal .slides section span.fragment.slideInUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.slideInDown,
+.reveal .slides section .fragment.slideInLeft,
+.reveal .slides section .fragment.slideInRight,
+.reveal .slides section .fragment.slideInUp {
+  opacity: 0;
+}
+.reveal .slides section .fragment.slideInDown.visible,
+.reveal .slides section .fragment.slideInLeft.visible,
+.reveal .slides section .fragment.slideInRight.visible,
+.reveal .slides section .fragment.slideInUp.visible {
+  opacity: 1;
+}
+
+/* Sliding Exits */
+.reveal .slides section span.fragment.slideOutDown,
+.reveal .slides section span.fragment.slideOutLeft,
+.reveal .slides section span.fragment.slideOutRight,
+.reveal .slides section span.fragment.slideOutUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.slideOutDown,
+.reveal .slides section .fragment.slideOutLeft,
+.reveal .slides section .fragment.slideOutRight,
+.reveal .slides section .fragment.slideOutUp {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.slideOutDown.visible,
+.reveal .slides section .fragment.slideOutLeft.visible,
+.reveal .slides section .fragment.slideOutRight.visible,
+.reveal .slides section .fragment.slideOutUp.visible {
+  opacity: 0;
+}

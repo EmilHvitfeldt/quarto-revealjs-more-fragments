@@ -121,6 +121,15 @@
     return null;
   }
 
+  // Get animation duration based on speed utility class
+  function getAnimationDuration(element) {
+    if (element.classList.contains('slower')) return '3s';
+    if (element.classList.contains('slow')) return '2s';
+    if (element.classList.contains('fast')) return '800ms';
+    if (element.classList.contains('faster')) return '500ms';
+    return '1s';
+  }
+
   // Apply animation to element
   function applyAnimation(element, animationName, keepVisible) {
     // Remove any existing animation
@@ -137,7 +146,7 @@
 
     // Apply new animation
     element.style.setProperty('animation-name', animationName, 'important');
-    element.style.setProperty('animation-duration', '1s', 'important');
+    element.style.setProperty('animation-duration', getAnimationDuration(element), 'important');
     element.style.setProperty('animation-fill-mode', 'both', 'important');
 
     // If keepVisible, clean up after animation ends

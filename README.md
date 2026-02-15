@@ -65,6 +65,24 @@ For full documentation and examples, visit the [documentation site](https://emil
 
 `flip`, `hinge`, `jackInTheBox`, `rollIn`, `rollOut`
 
+## Speed Utilities
+
+Control animation speed by adding a speed class:
+
+| Class | Duration |
+|-------|----------|
+| `slower` | 3s |
+| `slow` | 2s |
+| (default) | 1s |
+| `fast` | 800ms |
+| `faster` | 500ms |
+
+```markdown
+::: {.fragment .bounceIn .fast}
+This bounces in quickly!
+:::
+```
+
 ## Reversible Fragment Behavior
 
 All animations are fully reversible when navigating backwards. The reverse animation **exits the way it came in**:

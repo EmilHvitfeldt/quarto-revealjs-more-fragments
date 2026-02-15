@@ -475,6 +475,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">quick</span><span class="co">]</span>{.fragment .pulse} <span class="co">[</span><span class="ot">brown</span><span class="co">]</span>{.fragment .tada} <span class="co">[</span><span class="ot">fox</span><span class="co">]</span>{.fragment .wobble} jumps over the lazy dog.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+<section id="speed-utilities" class="level2">
+<h2 class="anchored" data-anchor-id="speed-utilities">Speed Utilities</h2>
+<p>Control animation speed by adding a speed class alongside the animation:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::: {.fragment .bounceIn .fast}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>This bounces in quickly!</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>slower</code></td>
+<td>3s</td>
+</tr>
+<tr class="even">
+<td><code>slow</code></td>
+<td>2s</td>
+</tr>
+<tr class="odd">
+<td>(default)</td>
+<td>1s</td>
+</tr>
+<tr class="even">
+<td><code>fast</code></td>
+<td>800ms</td>
+</tr>
+<tr class="odd">
+<td><code>faster</code></td>
+<td>500ms</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="reversible-fragment-behavior" class="level2">
 <h2 class="anchored" data-anchor-id="reversible-fragment-behavior">Reversible Fragment Behavior</h2>
 <p>All animations are fully reversible when navigating backwards through your presentation. The reverse animation is designed to <strong>exit the way it came in</strong>, creating a natural undo effect:</p>

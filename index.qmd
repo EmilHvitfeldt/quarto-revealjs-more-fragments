@@ -168,6 +168,24 @@ This sentence has a [bouncing]{.fragment .bounce} word in it.
 The [quick]{.fragment .pulse} [brown]{.fragment .tada} [fox]{.fragment .wobble} jumps over the lazy dog.
 ```
 
+## Speed Utilities
+
+Control animation speed by adding a speed class alongside the animation:
+
+```markdown
+::: {.fragment .bounceIn .fast}
+This bounces in quickly!
+:::
+```
+
+| Class | Duration |
+|-------|----------|
+| `slower` | 3s |
+| `slow` | 2s |
+| (default) | 1s |
+| `fast` | 800ms |
+| `faster` | 500ms |
+
 ## Reversible Fragment Behavior
 
 All animations are fully reversible when navigating backwards through your presentation. The reverse animation is designed to **exit the way it came in**, creating a natural undo effect:

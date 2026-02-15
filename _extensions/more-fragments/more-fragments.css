@@ -638,3 +638,24 @@
 .reveal .slides section .fragment.rollOut.visible {
   opacity: 0;
 }
+
+/* ==========================================================================
+   Speed Utility Classes
+   From Animate.css: https://animate.style/
+   ========================================================================== */
+
+.reveal .slides section .fragment.slower {
+  animation-duration: 3s;
+}
+
+.reveal .slides section .fragment.slow {
+  animation-duration: 2s;
+}
+
+.reveal .slides section .fragment.fast {
+  animation-duration: 800ms;
+}
+
+.reveal .slides section .fragment.faster {
+  animation-duration: 500ms;
+}

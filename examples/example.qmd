@@ -145,6 +145,30 @@ hinge
 :::
 ::::
 
+## Speed Utilities
+
+Control animation speed with utility classes:
+
+::: {.fragment .bounceIn .slower}
+slower (3s)
+:::
+
+::: {.fragment .bounceIn .slow}
+slow (2s)
+:::
+
+::: {.fragment .bounceIn}
+default (1s)
+:::
+
+::: {.fragment .bounceIn .fast}
+fast (800ms)
+:::
+
+::: {.fragment .bounceIn .faster}
+faster (500ms)
+:::
+
 ## Reversible Behavior
 
 All animations reverse naturally when navigating backwards.

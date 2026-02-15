@@ -323,6 +323,58 @@ lightSpeedOutRight
 lightSpeedOutLeft
 :::
 
+## Rotating Animations
+
+:::: {.columns}
+::: {.column width="50%"}
+**Entrances**
+
+::: {.fragment .rotateIn}
+rotateIn
+:::
+
+::: {.fragment .rotateInDownLeft}
+rotateInDownLeft
+:::
+
+::: {.fragment .rotateInDownRight}
+rotateInDownRight
+:::
+
+::: {.fragment .rotateInUpLeft}
+rotateInUpLeft
+:::
+
+::: {.fragment .rotateInUpRight}
+rotateInUpRight
+:::
+:::
+
+::: {.column width="50%"}
+**Exits**
+
+::: {.fragment .rotateOut}
+rotateOut
+:::
+
+::: {.fragment .rotateOutDownLeft}
+rotateOutDownLeft
+:::
+
+::: {.fragment .rotateOutDownRight}
+rotateOutDownRight
+:::
+
+::: {.fragment .rotateOutUpLeft}
+rotateOutUpLeft
+:::
+
+::: {.fragment .rotateOutUpRight}
+rotateOutUpRight
+:::
+:::
+::::
+
 ## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.

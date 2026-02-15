@@ -437,3 +437,55 @@
 .reveal .slides section .fragment.lightSpeedOutLeft.visible {
   opacity: 0;
 }
+
+/* ==========================================================================
+   Phase 8: Rotating Animations (Entrance/Exit Pairs)
+   Animation names are controlled by JavaScript for proper forward/reverse handling
+   ========================================================================== */
+
+/* Rotating Entrances */
+.reveal .slides section span.fragment.rotateIn,
+.reveal .slides section span.fragment.rotateInDownLeft,
+.reveal .slides section span.fragment.rotateInDownRight,
+.reveal .slides section span.fragment.rotateInUpLeft,
+.reveal .slides section span.fragment.rotateInUpRight {
+  display: inline-block;
+}
+.reveal .slides section .fragment.rotateIn,
+.reveal .slides section .fragment.rotateInDownLeft,
+.reveal .slides section .fragment.rotateInDownRight,
+.reveal .slides section .fragment.rotateInUpLeft,
+.reveal .slides section .fragment.rotateInUpRight {
+  opacity: 0;
+}
+.reveal .slides section .fragment.rotateIn.visible,
+.reveal .slides section .fragment.rotateInDownLeft.visible,
+.reveal .slides section .fragment.rotateInDownRight.visible,
+.reveal .slides section .fragment.rotateInUpLeft.visible,
+.reveal .slides section .fragment.rotateInUpRight.visible {
+  opacity: 1;
+}
+
+/* Rotating Exits */
+.reveal .slides section span.fragment.rotateOut,
+.reveal .slides section span.fragment.rotateOutDownLeft,
+.reveal .slides section span.fragment.rotateOutDownRight,
+.reveal .slides section span.fragment.rotateOutUpLeft,
+.reveal .slides section span.fragment.rotateOutUpRight {
+  display: inline-block;
+}
+.reveal .slides section .fragment.rotateOut,
+.reveal .slides section .fragment.rotateOutDownLeft,
+.reveal .slides section .fragment.rotateOutDownRight,
+.reveal .slides section .fragment.rotateOutUpLeft,
+.reveal .slides section .fragment.rotateOutUpRight {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.rotateOut.visible,
+.reveal .slides section .fragment.rotateOutDownLeft.visible,
+.reveal .slides section .fragment.rotateOutDownRight.visible,
+.reveal .slides section .fragment.rotateOutUpLeft.visible,
+.reveal .slides section .fragment.rotateOutUpRight.visible {
+  opacity: 0;
+}

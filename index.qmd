@@ -1,0 +1,193 @@
+---
+title: "quarto-more-fragments"
+subtitle: "Additional fragment animations for RevealJS presentations"
+---
+
+An extension that uses the [Animate.css](https://animate.style/) library to add additional fragment animations to RevealJS presentations.
+
+## Installation
+
+```bash
+quarto add EmilHvitfeldt/quarto-revealjs-more-fragments
+```
+
+## Quick Start
+
+Add the filter to your YAML header:
+
+```yaml
+---
+title: My Presentation
+format: revealjs
+filters:
+  - more-fragments
+---
+```
+
+Then use any animation class with `.fragment`:
+
+```markdown
+::: {.fragment .bounceIn}
+This text bounces in!
+:::
+```
+
+Use arrow keys or spacebar to trigger animations as you navigate through slides.
+
+## Examples
+
+### Overview
+
+A general introduction to the extension's functionality.
+
+[View Example](examples/example.html){.btn .btn-primary}
+[Source Code](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments/blob/main/examples/example.qmd){.btn .btn-secondary}
+
+<iframe src="examples/example.html" width="100%" height="500" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+
+### Animation Gallery
+
+All available animations from [Animate.css](https://animate.style/).
+
+[View Gallery](examples/animations.html){.btn .btn-primary}
+[Source Code](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments/blob/main/examples/animations.qmd){.btn .btn-secondary}
+
+<iframe src="examples/animations.html" width="100%" height="500" style="border: 1px solid #ccc; border-radius: 4px;"></iframe>
+
+## Available Animations
+
+### Attention Seekers
+
+These animations keep the element visible and animate when triggered:
+
+| Animation | Animation | Animation | Animation |
+|-----------|-----------|-----------|-----------|
+| `bounce` | `flash` | `pulse` | `rubberBand` |
+| `shakeX` | `shakeY` | `headShake` | `swing` |
+| `tada` | `wobble` | `jello` | `heartBeat` |
+
+### Back Animations
+
+| Entrances | Exits |
+|-----------|-------|
+| `backInDown` | `backOutDown` |
+| `backInLeft` | `backOutLeft` |
+| `backInRight` | `backOutRight` |
+| `backInUp` | `backOutUp` |
+
+### Bouncing Animations
+
+| Entrances | Exits |
+|-----------|-------|
+| `bounceIn` | `bounceOut` |
+| `bounceInDown` | `bounceOutDown` |
+| `bounceInLeft` | `bounceOutLeft` |
+| `bounceInRight` | `bounceOutRight` |
+| `bounceInUp` | `bounceOutUp` |
+
+### Fading Animations
+
+| Entrances | Exits |
+|-----------|-------|
+| `fadeIn` | `fadeOut` |
+| `fadeInDown` | `fadeOutDown` |
+| `fadeInDownBig` | `fadeOutDownBig` |
+| `fadeInLeft` | `fadeOutLeft` |
+| `fadeInLeftBig` | `fadeOutLeftBig` |
+| `fadeInRight` | `fadeOutRight` |
+| `fadeInRightBig` | `fadeOutRightBig` |
+| `fadeInUp` | `fadeOutUp` |
+| `fadeInUpBig` | `fadeOutUpBig` |
+| `fadeInTopLeft` | `fadeOutTopLeft` |
+| `fadeInTopRight` | `fadeOutTopRight` |
+| `fadeInBottomLeft` | `fadeOutBottomLeft` |
+| `fadeInBottomRight` | `fadeOutBottomRight` |
+
+### Flippers
+
+| Animation |
+|-----------|
+| `flip` |
+| `flipInX` |
+| `flipInY` |
+| `flipOutX` |
+| `flipOutY` |
+
+### Lightspeed
+
+| Entrances | Exits |
+|-----------|-------|
+| `lightSpeedInLeft` | `lightSpeedOutLeft` |
+| `lightSpeedInRight` | `lightSpeedOutRight` |
+
+### Rotating Animations
+
+| Entrances | Exits |
+|-----------|-------|
+| `rotateIn` | `rotateOut` |
+| `rotateInDownLeft` | `rotateOutDownLeft` |
+| `rotateInDownRight` | `rotateOutDownRight` |
+| `rotateInUpLeft` | `rotateOutUpLeft` |
+| `rotateInUpRight` | `rotateOutUpRight` |
+
+### Sliding Animations
+
+| Entrances | Exits |
+|-----------|-------|
+| `slideInDown` | `slideOutDown` |
+| `slideInLeft` | `slideOutLeft` |
+| `slideInRight` | `slideOutRight` |
+| `slideInUp` | `slideOutUp` |
+
+### Zooming Animations
+
+| Entrances | Exits |
+|-----------|-------|
+| `zoomIn` | `zoomOut` |
+| `zoomInDown` | `zoomOutDown` |
+| `zoomInLeft` | `zoomOutLeft` |
+| `zoomInRight` | `zoomOutRight` |
+| `zoomInUp` | `zoomOutUp` |
+
+### Specials
+
+| Animation |
+|-----------|
+| `hinge` |
+| `jackInTheBox` |
+| `rollIn` |
+| `rollOut` |
+
+## Inline Usage
+
+Animations also work on inline elements within text:
+
+```markdown
+This sentence has a [bouncing]{.fragment .bounce} word in it.
+
+The [quick]{.fragment .pulse} [brown]{.fragment .tada} [fox]{.fragment .wobble} jumps over the lazy dog.
+```
+
+## Reversible Fragment Behavior
+
+All animations are fully reversible when navigating backwards through your presentation. The reverse animation is designed to **exit the way it came in**, creating a natural undo effect:
+
+| Forward Animation | Reverse Animation | Reasoning |
+|-------------------|-------------------|-----------|
+| `backInDown` | `backOutUp` | Came from top, exits to top |
+| `backInLeft` | `backOutRight` | Came from right, exits to right |
+| `slideInDown` | `slideOutUp` | Slid down from top, slides back up |
+| `zoomInLeft` | `zoomOutLeft` | Zoomed in from left, zooms back to left |
+| `bounceInRight` | `bounceOutLeft` | Bounced in from left, bounces back to left |
+
+This means if you use `backInDown`, the element will:
+
+- **Forward**: Animate in from the top (backInDown)
+- **Backward**: Animate out to the top (backOutUp)
+
+This creates an intuitive "rewind" effect rather than a mirrored animation.
+
+## Links
+
+- [GitHub Repository](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments)
+- [Animate.css Library](https://animate.style/)

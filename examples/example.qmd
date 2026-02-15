@@ -1,0 +1,172 @@
+---
+title: "More Fragments"
+subtitle: "Additional fragment animations for RevealJS"
+format: revealjs
+filters:
+  - more-fragments
+---
+
+## What is this?
+
+This extension provides additional fragment animations for RevealJS presentations.
+
+::: {.fragment .bounceIn}
+Animations are powered by [Animate.css](https://animate.style/)
+:::
+
+::: {.fragment .fadeIn}
+All animations work **forwards** and **backwards**!
+:::
+
+## Basic Usage
+
+Use any animation class with `.fragment`:
+
+```markdown
+::: {.fragment .bounceIn}
+This text bounces in!
+:::
+```
+
+::: {.fragment .bounceIn}
+This text bounces in!
+:::
+
+## Inline Animations
+
+Animations work on inline elements too:
+
+```markdown
+The [quick]{.fragment .fadeIn} [brown]{.fragment .tada}
+[fox]{.fragment .bounceIn} jumps.
+```
+
+The [quick]{.fragment .fadeIn} [brown]{.fragment .tada} [fox]{.fragment .bounceIn} jumps over the lazy dog.
+
+## Attention Seekers
+
+These animations keep elements visible and animate when triggered:
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.fragment .bounce}
+bounce
+:::
+
+::: {.fragment .pulse}
+pulse
+:::
+
+::: {.fragment .tada}
+tada
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .wobble}
+wobble
+:::
+
+::: {.fragment .heartBeat}
+heartBeat
+:::
+
+::: {.fragment .jello}
+jello
+:::
+:::
+::::
+
+## Entrance Animations
+
+Elements appear with directional movement:
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.fragment .fadeInDown}
+fadeInDown
+:::
+
+::: {.fragment .bounceInLeft}
+bounceInLeft
+:::
+
+::: {.fragment .zoomIn}
+zoomIn
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .slideInRight}
+slideInRight
+:::
+
+::: {.fragment .rotateIn}
+rotateIn
+:::
+
+::: {.fragment .jackInTheBox}
+jackInTheBox
+:::
+:::
+::::
+
+## Exit Animations
+
+Elements disappear with directional movement:
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.fragment .fadeOut}
+fadeOut
+:::
+
+::: {.fragment .bounceOut}
+bounceOut
+:::
+
+::: {.fragment .zoomOut}
+zoomOut
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .slideOutLeft}
+slideOutLeft
+:::
+
+::: {.fragment .rotateOut}
+rotateOut
+:::
+
+::: {.fragment .hinge}
+hinge
+:::
+:::
+::::
+
+## Reversible Behavior
+
+All animations reverse naturally when navigating backwards.
+
+::: {.fragment .backInDown}
+`backInDown` enters from top...
+:::
+
+::: {.fragment .fadeIn}
+...and exits back to top with `backOutUp`
+:::
+
+::: {.fragment .slideInLeft}
+Try pressing the **left arrow** to see animations reverse!
+:::
+
+## Learn More
+
+::: {.fragment .fadeIn}
+See the [full animation gallery](animations.html) for all available animations.
+:::
+
+::: {.fragment .fadeIn}
+Visit [Animate.css](https://animate.style/) for animation documentation.
+:::

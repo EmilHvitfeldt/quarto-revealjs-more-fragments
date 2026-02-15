@@ -1,27 +1,32 @@
-# More Fragments
+# more-fragments
 
-A Quarto Reveal.js extension that provides additional fragment animations using [Animate.css](https://animate.style/).
+An extension that uses the [Animate.css](https://animate.style/) library to add additional fragment animations to RevealJS presentations.
 
 ## Installation
 
+To install this extension in your current directory (or into the Quarto project that you're currently working in), use the following command:
+
 ```bash
-quarto add emilhvitfeldt/quarto-revealjs-more-fragments
+quarto install extension EmilHvitfeldt/quarto-revealjs-more-fragments
 ```
 
 ## Usage
 
-Add the filter to your document's YAML header:
+The more-fragments extension is implemented as a filter in Quarto. Once installed, using the extension is easy.
 
-```yaml
+### Setup
+
+You can enable this like:
+
+```markdown
 ---
-title: "My Presentation"
-format: revealjs
+title: Simple more-fragments setup
 filters:
-  - more-fragments
+   - more-fragments
 ---
 ```
 
-Then use any animation class with the `.fragment` class:
+Then use any animation class with `.fragment`:
 
 ```markdown
 ::: {.fragment .bounceIn}
@@ -29,25 +34,21 @@ This text bounces in!
 :::
 ```
 
-### Inline Usage
-
 Animations also work on inline elements:
 
 ```markdown
 This sentence has a [bouncing]{.fragment .bounce} word in it.
 ```
 
+For full documentation and examples, visit the [documentation site](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/).
+
 ## Available Animations
 
 ### Attention Seekers
 
-These animations keep the element visible and animate when triggered:
-
 `bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`
 
 ### Entrance/Exit Animations
-
-These animations show or hide elements with directional movement:
 
 | Category | Entrances | Exits |
 |----------|-----------|-------|
@@ -66,22 +67,11 @@ These animations show or hide elements with directional movement:
 
 ## Reversible Fragment Behavior
 
-All animations are fully reversible when navigating backwards through your presentation. The reverse animation is designed to **exit the way it came in**, creating a natural undo effect:
+All animations are fully reversible when navigating backwards. The reverse animation **exits the way it came in**:
 
-| Forward Animation | Reverse Animation | Reasoning |
-|-------------------|-------------------|-----------|
+| Forward | Reverse | Reasoning |
+|---------|---------|-----------|
 | `backInDown` | `backOutUp` | Came from top, exits to top |
-| `backInLeft` | `backOutRight` | Came from right, exits to right |
-| `slideInDown` | `slideOutUp` | Slid down from top, slides back up |
-| `zoomInLeft` | `zoomOutLeft` | Zoomed in from left, zooms back to left |
-| `bounceInRight` | `bounceOutLeft` | Bounced in from left, bounces back to left |
-
-This means if you use `backInDown`, the element will:
-- **Forward**: Animate in from the top (backInDown)
-- **Backward**: Animate out to the top (backOutUp)
+| `slideInLeft` | `slideOutLeft` | Slid in from left, slides back to left |
 
 This creates an intuitive "rewind" effect rather than a mirrored animation.
-
-## License
-
-MIT

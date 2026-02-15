@@ -419,6 +419,58 @@ slideOutUp
 :::
 ::::
 
+## Zooming Animations
+
+:::: {.columns}
+::: {.column width="50%"}
+**Entrances**
+
+::: {.fragment .zoomIn}
+zoomIn
+:::
+
+::: {.fragment .zoomInDown}
+zoomInDown
+:::
+
+::: {.fragment .zoomInLeft}
+zoomInLeft
+:::
+
+::: {.fragment .zoomInRight}
+zoomInRight
+:::
+
+::: {.fragment .zoomInUp}
+zoomInUp
+:::
+:::
+
+::: {.column width="50%"}
+**Exits**
+
+::: {.fragment .zoomOut}
+zoomOut
+:::
+
+::: {.fragment .zoomOutDown}
+zoomOutDown
+:::
+
+::: {.fragment .zoomOutLeft}
+zoomOutLeft
+:::
+
+::: {.fragment .zoomOutRight}
+zoomOutRight
+:::
+
+::: {.fragment .zoomOutUp}
+zoomOutUp
+:::
+:::
+::::
+
 ## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.

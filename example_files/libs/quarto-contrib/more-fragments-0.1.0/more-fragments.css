@@ -535,3 +535,55 @@
 .reveal .slides section .fragment.slideOutUp.visible {
   opacity: 0;
 }
+
+/* ==========================================================================
+   Phase 10: Zooming Animations (Entrance/Exit Pairs)
+   Animation names are controlled by JavaScript for proper forward/reverse handling
+   ========================================================================== */
+
+/* Zooming Entrances */
+.reveal .slides section span.fragment.zoomIn,
+.reveal .slides section span.fragment.zoomInDown,
+.reveal .slides section span.fragment.zoomInLeft,
+.reveal .slides section span.fragment.zoomInRight,
+.reveal .slides section span.fragment.zoomInUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.zoomIn,
+.reveal .slides section .fragment.zoomInDown,
+.reveal .slides section .fragment.zoomInLeft,
+.reveal .slides section .fragment.zoomInRight,
+.reveal .slides section .fragment.zoomInUp {
+  opacity: 0;
+}
+.reveal .slides section .fragment.zoomIn.visible,
+.reveal .slides section .fragment.zoomInDown.visible,
+.reveal .slides section .fragment.zoomInLeft.visible,
+.reveal .slides section .fragment.zoomInRight.visible,
+.reveal .slides section .fragment.zoomInUp.visible {
+  opacity: 1;
+}
+
+/* Zooming Exits */
+.reveal .slides section span.fragment.zoomOut,
+.reveal .slides section span.fragment.zoomOutDown,
+.reveal .slides section span.fragment.zoomOutLeft,
+.reveal .slides section span.fragment.zoomOutRight,
+.reveal .slides section span.fragment.zoomOutUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.zoomOut,
+.reveal .slides section .fragment.zoomOutDown,
+.reveal .slides section .fragment.zoomOutLeft,
+.reveal .slides section .fragment.zoomOutRight,
+.reveal .slides section .fragment.zoomOutUp {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.zoomOut.visible,
+.reveal .slides section .fragment.zoomOutDown.visible,
+.reveal .slides section .fragment.zoomOutLeft.visible,
+.reveal .slides section .fragment.zoomOutRight.visible,
+.reveal .slides section .fragment.zoomOutUp.visible {
+  opacity: 0;
+}

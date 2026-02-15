@@ -89,16 +89,17 @@
     slideOutUp: 'slideInDown',
 
     // Zooming animations
+    // Zooming animations (reverse direction: exit the way it came in)
     zoomIn: 'zoomOut',
-    zoomInDown: 'zoomOutDown',
+    zoomInDown: 'zoomOutUp',
     zoomInLeft: 'zoomOutLeft',
     zoomInRight: 'zoomOutRight',
-    zoomInUp: 'zoomOutUp',
+    zoomInUp: 'zoomOutDown',
     zoomOut: 'zoomIn',
-    zoomOutDown: 'zoomInDown',
+    zoomOutDown: 'zoomInUp',
     zoomOutLeft: 'zoomInLeft',
     zoomOutRight: 'zoomInRight',
-    zoomOutUp: 'zoomInUp',
+    zoomOutUp: 'zoomInDown',
 
     // Specials
     jackInTheBox: 'zoomOut',

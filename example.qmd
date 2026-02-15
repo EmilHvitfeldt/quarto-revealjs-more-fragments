@@ -5,28 +5,66 @@ filters:
   - more-fragments
 ---
 
-## Bounce Fragment
+## Attention Seekers
 
+:::: {.columns}
+::: {.column width="33%"}
 ::: {.fragment .bounce}
-This text will bounce!
+bounce
 :::
 
-::: {.fragment .bounce}
-This bounces second!
+::: {.fragment .flash}
+flash
 :::
 
-## Multiple Items
+::: {.fragment .pulse}
+pulse
+:::
 
-- Item 1
-- [Item 2 bounces]{.fragment .bounce}
-- Item 3
+::: {.fragment .rubberBand}
+rubberBand
+:::
+:::
 
-## Inline Words
+::: {.column width="33%"}
+::: {.fragment .shakeX}
+shakeX
+:::
+
+::: {.fragment .shakeY}
+shakeY
+:::
+
+::: {.fragment .headShake}
+headShake
+:::
+
+::: {.fragment .swing}
+swing
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment .tada}
+tada
+:::
+
+::: {.fragment .wobble}
+wobble
+:::
+
+::: {.fragment .jello}
+jello
+:::
+
+::: {.fragment .heartBeat}
+heartBeat
+:::
+:::
+::::
+
+## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.
 
-The [quick]{.fragment .bounce} [brown]{.fragment .bounce} [fox]{.fragment .bounce} jumps over the lazy dog.
-
-## Ordered Inline
-
-Words appear in custom order: [third]{.fragment .bounce fragment-index=3} [first]{.fragment .bounce fragment-index=1} [second]{.fragment .bounce fragment-index=2}.
+The [quick]{.fragment .pulse} [brown]{.fragment .tada} [fox]{.fragment .wobble} jumps over the lazy dog.

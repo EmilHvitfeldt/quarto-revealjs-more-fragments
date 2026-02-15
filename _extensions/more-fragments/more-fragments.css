@@ -1,18 +1,161 @@
 /* More Fragments - Animate.css integration */
 
-/* Bounce fragment - always visible, just animates when triggered */
+/* ==========================================================================
+   Phase 1: Attention Seekers (CSS-only, same animation both ways)
+   ========================================================================== */
+
+/* Bounce */
 .reveal .slides section .fragment.bounce {
   opacity: unset;
   visibility: unset;
 }
-
-/* Inline elements need inline-block for animations to work */
 .reveal .slides section span.fragment.bounce {
   display: inline-block;
 }
-
-/* Animate on current-fragment (triggers both forward and backward) */
 .reveal .slides section .fragment.bounce.current-fragment {
   animation-name: bounce;
+  animation-duration: 1s;
+}
+
+/* Flash */
+.reveal .slides section .fragment.flash {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.flash {
+  display: inline-block;
+}
+.reveal .slides section .fragment.flash.current-fragment {
+  animation-name: flash;
+  animation-duration: 1s;
+}
+
+/* Pulse */
+.reveal .slides section .fragment.pulse {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.pulse {
+  display: inline-block;
+}
+.reveal .slides section .fragment.pulse.current-fragment {
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+
+/* RubberBand */
+.reveal .slides section .fragment.rubberBand {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.rubberBand {
+  display: inline-block;
+}
+.reveal .slides section .fragment.rubberBand.current-fragment {
+  animation-name: rubberBand;
+  animation-duration: 1s;
+}
+
+/* ShakeX */
+.reveal .slides section .fragment.shakeX {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.shakeX {
+  display: inline-block;
+}
+.reveal .slides section .fragment.shakeX.current-fragment {
+  animation-name: shakeX;
+  animation-duration: 1s;
+}
+
+/* ShakeY */
+.reveal .slides section .fragment.shakeY {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.shakeY {
+  display: inline-block;
+}
+.reveal .slides section .fragment.shakeY.current-fragment {
+  animation-name: shakeY;
+  animation-duration: 1s;
+}
+
+/* HeadShake */
+.reveal .slides section .fragment.headShake {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.headShake {
+  display: inline-block;
+}
+.reveal .slides section .fragment.headShake.current-fragment {
+  animation-name: headShake;
+  animation-duration: 1s;
+}
+
+/* Swing */
+.reveal .slides section .fragment.swing {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.swing {
+  display: inline-block;
+}
+.reveal .slides section .fragment.swing.current-fragment {
+  animation-name: swing;
+  animation-duration: 1s;
+}
+
+/* Tada */
+.reveal .slides section .fragment.tada {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.tada {
+  display: inline-block;
+}
+.reveal .slides section .fragment.tada.current-fragment {
+  animation-name: tada;
+  animation-duration: 1s;
+}
+
+/* Wobble */
+.reveal .slides section .fragment.wobble {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.wobble {
+  display: inline-block;
+}
+.reveal .slides section .fragment.wobble.current-fragment {
+  animation-name: wobble;
+  animation-duration: 1s;
+}
+
+/* Jello */
+.reveal .slides section .fragment.jello {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.jello {
+  display: inline-block;
+}
+.reveal .slides section .fragment.jello.current-fragment {
+  animation-name: jello;
+  animation-duration: 1s;
+}
+
+/* HeartBeat */
+.reveal .slides section .fragment.heartBeat {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.heartBeat {
+  display: inline-block;
+}
+.reveal .slides section .fragment.heartBeat.current-fragment {
+  animation-name: heartBeat;
   animation-duration: 1s;
 }

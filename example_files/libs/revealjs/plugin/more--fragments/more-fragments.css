@@ -1,0 +1,12 @@
+/* More Fragments - Animate.css integration */
+
+/* Bounce fragment */
+.fragment.bounce {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.fragment.bounce.visible {
+  animation-name: bounce;
+  animation-duration: 1s;
+}

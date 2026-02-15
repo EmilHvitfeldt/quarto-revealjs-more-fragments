@@ -1,0 +1,22 @@
+---
+title: "More Fragments Demo"
+format: revealjs
+filters:
+  - more-fragments
+---
+
+## Bounce Fragment
+
+::: {.fragment .bounce}
+This text will bounce!
+:::
+
+::: {.fragment .bounce}
+This bounces second!
+:::
+
+## Multiple Items
+
+- Item 1
+- [Item 2 bounces]{.fragment .bounce}
+- Item 3

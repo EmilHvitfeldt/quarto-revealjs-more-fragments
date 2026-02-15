@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:quarto.org)",
+      "WebFetch(domain:slidecrafting-book.com)",
+      "WebFetch(domain:animate.style)",
+      "Bash(quarto preview:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl:*)"
+    ]
+  }
+}

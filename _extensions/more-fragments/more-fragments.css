@@ -1,0 +1,13 @@
+/* More Fragments - Animate.css integration */
+
+/* Bounce fragment - always visible, just animates when triggered */
+.reveal .slides section .fragment.bounce {
+  opacity: unset;
+  visibility: unset;
+}
+
+/* Animate on current-fragment (triggers both forward and backward) */
+.reveal .slides section .fragment.bounce.current-fragment {
+  animation-name: bounce;
+  animation-duration: 1s;
+}

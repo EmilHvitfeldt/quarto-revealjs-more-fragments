@@ -159,3 +159,49 @@
   animation-name: heartBeat;
   animation-duration: 1s;
 }
+
+/* ==========================================================================
+   Phase 3: Back Animations (Entrance/Exit Pairs)
+   Animation names are controlled by JavaScript for proper forward/reverse handling
+   ========================================================================== */
+
+/* Back Entrances */
+.reveal .slides section span.fragment.backInDown,
+.reveal .slides section span.fragment.backInLeft,
+.reveal .slides section span.fragment.backInRight,
+.reveal .slides section span.fragment.backInUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.backInDown,
+.reveal .slides section .fragment.backInLeft,
+.reveal .slides section .fragment.backInRight,
+.reveal .slides section .fragment.backInUp {
+  opacity: 0;
+}
+.reveal .slides section .fragment.backInDown.visible,
+.reveal .slides section .fragment.backInLeft.visible,
+.reveal .slides section .fragment.backInRight.visible,
+.reveal .slides section .fragment.backInUp.visible {
+  opacity: 1;
+}
+
+/* Back Exits */
+.reveal .slides section span.fragment.backOutDown,
+.reveal .slides section span.fragment.backOutLeft,
+.reveal .slides section span.fragment.backOutRight,
+.reveal .slides section span.fragment.backOutUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.backOutDown,
+.reveal .slides section .fragment.backOutLeft,
+.reveal .slides section .fragment.backOutRight,
+.reveal .slides section .fragment.backOutUp {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.backOutDown.visible,
+.reveal .slides section .fragment.backOutLeft.visible,
+.reveal .slides section .fragment.backOutRight.visible,
+.reveal .slides section .fragment.backOutUp.visible {
+  opacity: 0;
+}

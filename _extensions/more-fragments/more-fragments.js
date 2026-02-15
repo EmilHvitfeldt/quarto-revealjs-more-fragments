@@ -3,15 +3,15 @@
 (function() {
   // Mapping of entrance animations to their exit counterparts
   const animationPairs = {
-    // Back animations
-    backInDown: 'backOutDown',
-    backInLeft: 'backOutLeft',
-    backInRight: 'backOutRight',
-    backInUp: 'backOutUp',
-    backOutDown: 'backInDown',
-    backOutLeft: 'backInLeft',
-    backOutRight: 'backInRight',
-    backOutUp: 'backInUp',
+    // Back animations (reverse direction: exit the way it came in)
+    backInDown: 'backOutUp',
+    backInLeft: 'backOutRight',
+    backInRight: 'backOutLeft',
+    backInUp: 'backOutDown',
+    backOutDown: 'backInUp',
+    backOutLeft: 'backInRight',
+    backOutRight: 'backInLeft',
+    backOutUp: 'backInDown',
 
     // Bouncing animations
     bounceIn: 'bounceOut',
@@ -120,28 +120,55 @@
   }
 
   // Apply animation to element
-  function applyAnimation(element, animationName) {
+  function applyAnimation(element, animationName, keepVisible) {
     // Remove any existing animation
-    element.style.animationName = 'none';
+    element.style.setProperty('animation-name', 'none');
+
+    // If keepVisible, force the element to stay visible during animation
+    if (keepVisible) {
+      element.style.setProperty('opacity', '1', 'important');
+      element.style.setProperty('visibility', 'visible', 'important');
+    }
+
     // Force reflow
     element.offsetHeight;
+
     // Apply new animation
-    element.style.animationName = animationName;
+    element.style.setProperty('animation-name', animationName, 'important');
+    element.style.setProperty('animation-duration', '1s', 'important');
+    element.style.setProperty('animation-fill-mode', 'both', 'important');
+
+    // If keepVisible, clean up after animation ends
+    if (keepVisible) {
+      element.addEventListener('animationend', function handler() {
+        element.style.removeProperty('opacity');
+        element.style.removeProperty('visibility');
+        element.style.removeProperty('animation-name');
+        element.style.removeProperty('animation-duration');
+        element.style.removeProperty('animation-fill-mode');
+        element.removeEventListener('animationend', handler);
+      });
+    }
   }
 
   // Wait for Reveal to be ready
-  if (typeof Reveal !== 'undefined') {
-    Reveal.on('ready', function() {
-      initMoreFragments();
-    });
-  } else {
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof Reveal !== 'undefined') {
+  function setupReveal() {
+    if (typeof Reveal !== 'undefined') {
+      // Check if Reveal is already initialized
+      if (Reveal.isReady()) {
+        initMoreFragments();
+      } else {
         Reveal.on('ready', function() {
           initMoreFragments();
         });
       }
-    });
+    }
+  }
+
+  if (document.readyState === 'complete') {
+    setupReveal();
+  } else {
+    window.addEventListener('load', setupReveal);
   }
 
   function initMoreFragments() {
@@ -151,8 +178,7 @@
       const animClass = getAnimationClass(fragment);
 
       if (animClass && animationPairs[animClass]) {
-        // Apply the forward animation (the class name itself)
-        applyAnimation(fragment, animClass);
+        applyAnimation(fragment, animClass, false);
       }
     });
 
@@ -162,8 +188,7 @@
       const animClass = getAnimationClass(fragment);
 
       if (animClass && animationPairs[animClass]) {
-        // Apply the reverse animation
-        applyAnimation(fragment, animationPairs[animClass]);
+        applyAnimation(fragment, animationPairs[animClass], true);
       }
     });
   }

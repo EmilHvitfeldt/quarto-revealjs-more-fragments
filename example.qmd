@@ -63,6 +63,50 @@ heartBeat
 :::
 ::::
 
+## Back Animations
+
+:::: {.columns}
+::: {.column width="50%"}
+**Entrances**
+
+::: {.fragment .backInDown}
+backInDown
+:::
+
+::: {.fragment .backInLeft}
+backInLeft
+:::
+
+::: {.fragment .backInRight}
+backInRight
+:::
+
+::: {.fragment .backInUp}
+backInUp
+:::
+:::
+
+::: {.column width="50%"}
+**Exits**
+
+::: {.fragment .backOutDown}
+backOutDown
+:::
+
+::: {.fragment .backOutLeft}
+backOutLeft
+:::
+
+::: {.fragment .backOutRight}
+backOutRight
+:::
+
+::: {.fragment .backOutUp}
+backOutUp
+:::
+:::
+::::
+
 ## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.

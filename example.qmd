@@ -471,6 +471,24 @@ zoomOutUp
 :::
 ::::
 
+## Specials
+
+::: {.fragment .hinge}
+hinge
+:::
+
+::: {.fragment .jackInTheBox}
+jackInTheBox
+:::
+
+::: {.fragment .rollIn}
+rollIn
+:::
+
+::: {.fragment .rollOut}
+rollOut
+:::
+
 ## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.

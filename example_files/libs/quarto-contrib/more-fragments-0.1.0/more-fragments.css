@@ -587,3 +587,54 @@
 .reveal .slides section .fragment.zoomOutUp.visible {
   opacity: 0;
 }
+
+/* ==========================================================================
+   Phase 11: Specials
+   Animation names are controlled by JavaScript for proper forward/reverse handling
+   ========================================================================== */
+
+/* Hinge - entrance animation that fades in on reverse */
+.reveal .slides section span.fragment.hinge {
+  display: inline-block;
+}
+.reveal .slides section .fragment.hinge {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.hinge.visible {
+  opacity: 0;
+}
+
+/* Jack In The Box - entrance animation */
+.reveal .slides section span.fragment.jackInTheBox {
+  display: inline-block;
+}
+.reveal .slides section .fragment.jackInTheBox {
+  opacity: 0;
+}
+.reveal .slides section .fragment.jackInTheBox.visible {
+  opacity: 1;
+}
+
+/* Roll In - entrance animation */
+.reveal .slides section span.fragment.rollIn {
+  display: inline-block;
+}
+.reveal .slides section .fragment.rollIn {
+  opacity: 0;
+}
+.reveal .slides section .fragment.rollIn.visible {
+  opacity: 1;
+}
+
+/* Roll Out - exit animation */
+.reveal .slides section span.fragment.rollOut {
+  display: inline-block;
+}
+.reveal .slides section .fragment.rollOut {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.rollOut.visible {
+  opacity: 0;
+}

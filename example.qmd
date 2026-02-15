@@ -20,3 +20,13 @@ This bounces second!
 - Item 1
 - [Item 2 bounces]{.fragment .bounce}
 - Item 3
+
+## Inline Words
+
+This sentence has a [bouncing]{.fragment .bounce} word in it.
+
+The [quick]{.fragment .bounce} [brown]{.fragment .bounce} [fox]{.fragment .bounce} jumps over the lazy dog.
+
+## Ordered Inline
+
+Words appear in custom order: [third]{.fragment .bounce fragment-index=3} [first]{.fragment .bounce fragment-index=1} [second]{.fragment .bounce fragment-index=2}.

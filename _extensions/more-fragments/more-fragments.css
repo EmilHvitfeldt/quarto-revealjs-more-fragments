@@ -6,6 +6,11 @@
   visibility: unset;
 }
 
+/* Inline elements need inline-block for animations to work */
+.reveal .slides section span.fragment.bounce {
+  display: inline-block;
+}
+
 /* Animate on current-fragment (triggers both forward and backward) */
 .reveal .slides section .fragment.bounce.current-fragment {
   animation-name: bounce;

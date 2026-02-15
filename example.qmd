@@ -283,6 +283,28 @@ fadeOutBottomRight
 :::
 ::::
 
+## Flippers
+
+::: {.fragment .flip}
+flip
+:::
+
+::: {.fragment .flipInX}
+flipInX
+:::
+
+::: {.fragment .flipInY}
+flipInY
+:::
+
+::: {.fragment .flipOutX}
+flipOutX
+:::
+
+::: {.fragment .flipOutY}
+flipOutY
+:::
+
 ## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.

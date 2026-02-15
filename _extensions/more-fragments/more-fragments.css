@@ -357,3 +357,49 @@
 .reveal .slides section .fragment.fadeOutBottomRight.visible {
   opacity: 0;
 }
+
+/* ==========================================================================
+   Phase 6: Flippers
+   ========================================================================== */
+
+/* Flip - attention seeker style (always visible, just animates) */
+.reveal .slides section .fragment.flip {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.flip {
+  display: inline-block;
+}
+.reveal .slides section .fragment.flip.current-fragment {
+  animation-name: flip;
+  animation-duration: 1s;
+}
+
+/* Flip Entrances */
+.reveal .slides section span.fragment.flipInX,
+.reveal .slides section span.fragment.flipInY {
+  display: inline-block;
+}
+.reveal .slides section .fragment.flipInX,
+.reveal .slides section .fragment.flipInY {
+  opacity: 0;
+}
+.reveal .slides section .fragment.flipInX.visible,
+.reveal .slides section .fragment.flipInY.visible {
+  opacity: 1;
+}
+
+/* Flip Exits */
+.reveal .slides section span.fragment.flipOutX,
+.reveal .slides section span.fragment.flipOutY {
+  display: inline-block;
+}
+.reveal .slides section .fragment.flipOutX,
+.reveal .slides section .fragment.flipOutY {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.flipOutX.visible,
+.reveal .slides section .fragment.flipOutY.visible {
+  opacity: 0;
+}

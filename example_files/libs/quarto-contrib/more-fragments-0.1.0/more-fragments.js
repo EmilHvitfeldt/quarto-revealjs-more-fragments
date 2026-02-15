@@ -13,17 +13,17 @@
     backOutRight: 'backInLeft',
     backOutUp: 'backInDown',
 
-    // Bouncing animations
+    // Bouncing animations (reverse direction: exit the way it came in)
     bounceIn: 'bounceOut',
-    bounceInDown: 'bounceOutDown',
-    bounceInLeft: 'bounceOutLeft',
-    bounceInRight: 'bounceOutRight',
-    bounceInUp: 'bounceOutUp',
+    bounceInDown: 'bounceOutUp',
+    bounceInLeft: 'bounceOutRight',
+    bounceInRight: 'bounceOutLeft',
+    bounceInUp: 'bounceOutDown',
     bounceOut: 'bounceIn',
-    bounceOutDown: 'bounceInDown',
-    bounceOutLeft: 'bounceInLeft',
-    bounceOutRight: 'bounceInRight',
-    bounceOutUp: 'bounceInUp',
+    bounceOutDown: 'bounceInUp',
+    bounceOutLeft: 'bounceInRight',
+    bounceOutRight: 'bounceInLeft',
+    bounceOutUp: 'bounceInDown',
 
     // Fading animations
     fadeIn: 'fadeOut',

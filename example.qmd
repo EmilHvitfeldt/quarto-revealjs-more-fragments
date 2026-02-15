@@ -107,6 +107,58 @@ backOutUp
 :::
 ::::
 
+## Bouncing Animations
+
+:::: {.columns}
+::: {.column width="50%"}
+**Entrances**
+
+::: {.fragment .bounceIn}
+bounceIn
+:::
+
+::: {.fragment .bounceInDown}
+bounceInDown
+:::
+
+::: {.fragment .bounceInLeft}
+bounceInLeft
+:::
+
+::: {.fragment .bounceInRight}
+bounceInRight
+:::
+
+::: {.fragment .bounceInUp}
+bounceInUp
+:::
+:::
+
+::: {.column width="50%"}
+**Exits**
+
+::: {.fragment .bounceOut}
+bounceOut
+:::
+
+::: {.fragment .bounceOutDown}
+bounceOutDown
+:::
+
+::: {.fragment .bounceOutLeft}
+bounceOutLeft
+:::
+
+::: {.fragment .bounceOutRight}
+bounceOutRight
+:::
+
+::: {.fragment .bounceOutUp}
+bounceOutUp
+:::
+:::
+::::
+
 ## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.

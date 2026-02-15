@@ -205,3 +205,55 @@
 .reveal .slides section .fragment.backOutUp.visible {
   opacity: 0;
 }
+
+/* ==========================================================================
+   Phase 4: Bouncing Animations (Entrance/Exit Pairs)
+   Animation names are controlled by JavaScript for proper forward/reverse handling
+   ========================================================================== */
+
+/* Bouncing Entrances */
+.reveal .slides section span.fragment.bounceIn,
+.reveal .slides section span.fragment.bounceInDown,
+.reveal .slides section span.fragment.bounceInLeft,
+.reveal .slides section span.fragment.bounceInRight,
+.reveal .slides section span.fragment.bounceInUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.bounceIn,
+.reveal .slides section .fragment.bounceInDown,
+.reveal .slides section .fragment.bounceInLeft,
+.reveal .slides section .fragment.bounceInRight,
+.reveal .slides section .fragment.bounceInUp {
+  opacity: 0;
+}
+.reveal .slides section .fragment.bounceIn.visible,
+.reveal .slides section .fragment.bounceInDown.visible,
+.reveal .slides section .fragment.bounceInLeft.visible,
+.reveal .slides section .fragment.bounceInRight.visible,
+.reveal .slides section .fragment.bounceInUp.visible {
+  opacity: 1;
+}
+
+/* Bouncing Exits */
+.reveal .slides section span.fragment.bounceOut,
+.reveal .slides section span.fragment.bounceOutDown,
+.reveal .slides section span.fragment.bounceOutLeft,
+.reveal .slides section span.fragment.bounceOutRight,
+.reveal .slides section span.fragment.bounceOutUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.bounceOut,
+.reveal .slides section .fragment.bounceOutDown,
+.reveal .slides section .fragment.bounceOutLeft,
+.reveal .slides section .fragment.bounceOutRight,
+.reveal .slides section .fragment.bounceOutUp {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.bounceOut.visible,
+.reveal .slides section .fragment.bounceOutDown.visible,
+.reveal .slides section .fragment.bounceOutLeft.visible,
+.reveal .slides section .fragment.bounceOutRight.visible,
+.reveal .slides section .fragment.bounceOutUp.visible {
+  opacity: 0;
+}

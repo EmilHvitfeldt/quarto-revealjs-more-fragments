@@ -159,6 +159,130 @@ bounceOutUp
 :::
 ::::
 
+## Fading Entrances
+
+:::: {.columns}
+::: {.column width="33%"}
+::: {.fragment .fadeIn}
+fadeIn
+:::
+
+::: {.fragment .fadeInDown}
+fadeInDown
+:::
+
+::: {.fragment .fadeInDownBig}
+fadeInDownBig
+:::
+
+::: {.fragment .fadeInLeft}
+fadeInLeft
+:::
+
+::: {.fragment .fadeInLeftBig}
+fadeInLeftBig
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment .fadeInRight}
+fadeInRight
+:::
+
+::: {.fragment .fadeInRightBig}
+fadeInRightBig
+:::
+
+::: {.fragment .fadeInUp}
+fadeInUp
+:::
+
+::: {.fragment .fadeInUpBig}
+fadeInUpBig
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment .fadeInTopLeft}
+fadeInTopLeft
+:::
+
+::: {.fragment .fadeInTopRight}
+fadeInTopRight
+:::
+
+::: {.fragment .fadeInBottomLeft}
+fadeInBottomLeft
+:::
+
+::: {.fragment .fadeInBottomRight}
+fadeInBottomRight
+:::
+:::
+::::
+
+## Fading Exits
+
+:::: {.columns}
+::: {.column width="33%"}
+::: {.fragment .fadeOut}
+fadeOut
+:::
+
+::: {.fragment .fadeOutDown}
+fadeOutDown
+:::
+
+::: {.fragment .fadeOutDownBig}
+fadeOutDownBig
+:::
+
+::: {.fragment .fadeOutLeft}
+fadeOutLeft
+:::
+
+::: {.fragment .fadeOutLeftBig}
+fadeOutLeftBig
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment .fadeOutRight}
+fadeOutRight
+:::
+
+::: {.fragment .fadeOutRightBig}
+fadeOutRightBig
+:::
+
+::: {.fragment .fadeOutUp}
+fadeOutUp
+:::
+
+::: {.fragment .fadeOutUpBig}
+fadeOutUpBig
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment .fadeOutTopLeft}
+fadeOutTopLeft
+:::
+
+::: {.fragment .fadeOutTopRight}
+fadeOutTopRight
+:::
+
+::: {.fragment .fadeOutBottomLeft}
+fadeOutBottomLeft
+:::
+
+::: {.fragment .fadeOutBottomRight}
+fadeOutBottomRight
+:::
+:::
+::::
+
 ## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.

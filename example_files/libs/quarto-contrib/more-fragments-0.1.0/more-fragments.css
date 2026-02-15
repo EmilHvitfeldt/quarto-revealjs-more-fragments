@@ -257,3 +257,103 @@
 .reveal .slides section .fragment.bounceOutUp.visible {
   opacity: 0;
 }
+
+/* ==========================================================================
+   Phase 5: Fading Animations (Entrance/Exit Pairs)
+   Animation names are controlled by JavaScript for proper forward/reverse handling
+   ========================================================================== */
+
+/* Fading Entrances */
+.reveal .slides section span.fragment.fadeIn,
+.reveal .slides section span.fragment.fadeInDown,
+.reveal .slides section span.fragment.fadeInDownBig,
+.reveal .slides section span.fragment.fadeInLeft,
+.reveal .slides section span.fragment.fadeInLeftBig,
+.reveal .slides section span.fragment.fadeInRight,
+.reveal .slides section span.fragment.fadeInRightBig,
+.reveal .slides section span.fragment.fadeInUp,
+.reveal .slides section span.fragment.fadeInUpBig,
+.reveal .slides section span.fragment.fadeInTopLeft,
+.reveal .slides section span.fragment.fadeInTopRight,
+.reveal .slides section span.fragment.fadeInBottomLeft,
+.reveal .slides section span.fragment.fadeInBottomRight {
+  display: inline-block;
+}
+.reveal .slides section .fragment.fadeIn,
+.reveal .slides section .fragment.fadeInDown,
+.reveal .slides section .fragment.fadeInDownBig,
+.reveal .slides section .fragment.fadeInLeft,
+.reveal .slides section .fragment.fadeInLeftBig,
+.reveal .slides section .fragment.fadeInRight,
+.reveal .slides section .fragment.fadeInRightBig,
+.reveal .slides section .fragment.fadeInUp,
+.reveal .slides section .fragment.fadeInUpBig,
+.reveal .slides section .fragment.fadeInTopLeft,
+.reveal .slides section .fragment.fadeInTopRight,
+.reveal .slides section .fragment.fadeInBottomLeft,
+.reveal .slides section .fragment.fadeInBottomRight {
+  opacity: 0;
+}
+.reveal .slides section .fragment.fadeIn.visible,
+.reveal .slides section .fragment.fadeInDown.visible,
+.reveal .slides section .fragment.fadeInDownBig.visible,
+.reveal .slides section .fragment.fadeInLeft.visible,
+.reveal .slides section .fragment.fadeInLeftBig.visible,
+.reveal .slides section .fragment.fadeInRight.visible,
+.reveal .slides section .fragment.fadeInRightBig.visible,
+.reveal .slides section .fragment.fadeInUp.visible,
+.reveal .slides section .fragment.fadeInUpBig.visible,
+.reveal .slides section .fragment.fadeInTopLeft.visible,
+.reveal .slides section .fragment.fadeInTopRight.visible,
+.reveal .slides section .fragment.fadeInBottomLeft.visible,
+.reveal .slides section .fragment.fadeInBottomRight.visible {
+  opacity: 1;
+}
+
+/* Fading Exits */
+.reveal .slides section span.fragment.fadeOut,
+.reveal .slides section span.fragment.fadeOutDown,
+.reveal .slides section span.fragment.fadeOutDownBig,
+.reveal .slides section span.fragment.fadeOutLeft,
+.reveal .slides section span.fragment.fadeOutLeftBig,
+.reveal .slides section span.fragment.fadeOutRight,
+.reveal .slides section span.fragment.fadeOutRightBig,
+.reveal .slides section span.fragment.fadeOutUp,
+.reveal .slides section span.fragment.fadeOutUpBig,
+.reveal .slides section span.fragment.fadeOutTopLeft,
+.reveal .slides section span.fragment.fadeOutTopRight,
+.reveal .slides section span.fragment.fadeOutBottomLeft,
+.reveal .slides section span.fragment.fadeOutBottomRight {
+  display: inline-block;
+}
+.reveal .slides section .fragment.fadeOut,
+.reveal .slides section .fragment.fadeOutDown,
+.reveal .slides section .fragment.fadeOutDownBig,
+.reveal .slides section .fragment.fadeOutLeft,
+.reveal .slides section .fragment.fadeOutLeftBig,
+.reveal .slides section .fragment.fadeOutRight,
+.reveal .slides section .fragment.fadeOutRightBig,
+.reveal .slides section .fragment.fadeOutUp,
+.reveal .slides section .fragment.fadeOutUpBig,
+.reveal .slides section .fragment.fadeOutTopLeft,
+.reveal .slides section .fragment.fadeOutTopRight,
+.reveal .slides section .fragment.fadeOutBottomLeft,
+.reveal .slides section .fragment.fadeOutBottomRight {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.fadeOut.visible,
+.reveal .slides section .fragment.fadeOutDown.visible,
+.reveal .slides section .fragment.fadeOutDownBig.visible,
+.reveal .slides section .fragment.fadeOutLeft.visible,
+.reveal .slides section .fragment.fadeOutLeftBig.visible,
+.reveal .slides section .fragment.fadeOutRight.visible,
+.reveal .slides section .fragment.fadeOutRightBig.visible,
+.reveal .slides section .fragment.fadeOutUp.visible,
+.reveal .slides section .fragment.fadeOutUpBig.visible,
+.reveal .slides section .fragment.fadeOutTopLeft.visible,
+.reveal .slides section .fragment.fadeOutTopRight.visible,
+.reveal .slides section .fragment.fadeOutBottomLeft.visible,
+.reveal .slides section .fragment.fadeOutBottomRight.visible {
+  opacity: 0;
+}

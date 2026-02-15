@@ -403,3 +403,37 @@
 .reveal .slides section .fragment.flipOutY.visible {
   opacity: 0;
 }
+
+/* ==========================================================================
+   Phase 7: Lightspeed
+   Animation names are controlled by JavaScript for proper forward/reverse handling
+   ========================================================================== */
+
+/* Lightspeed Entrances */
+.reveal .slides section span.fragment.lightSpeedInRight,
+.reveal .slides section span.fragment.lightSpeedInLeft {
+  display: inline-block;
+}
+.reveal .slides section .fragment.lightSpeedInRight,
+.reveal .slides section .fragment.lightSpeedInLeft {
+  opacity: 0;
+}
+.reveal .slides section .fragment.lightSpeedInRight.visible,
+.reveal .slides section .fragment.lightSpeedInLeft.visible {
+  opacity: 1;
+}
+
+/* Lightspeed Exits */
+.reveal .slides section span.fragment.lightSpeedOutRight,
+.reveal .slides section span.fragment.lightSpeedOutLeft {
+  display: inline-block;
+}
+.reveal .slides section .fragment.lightSpeedOutRight,
+.reveal .slides section .fragment.lightSpeedOutLeft {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.lightSpeedOutRight.visible,
+.reveal .slides section .fragment.lightSpeedOutLeft.visible {
+  opacity: 0;
+}

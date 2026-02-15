@@ -134,10 +134,10 @@ heartBeat
 
 ### Phase 2: JavaScript Infrastructure
 
-- [ ] Create `more-fragments.js` for direction detection
-- [ ] Register as Reveal.js plugin in `_extension.yml`
-- [ ] Implement `fragmentshown` event handler
-- [ ] Implement `fragmenthidden` event handler
+- [x] Create `more-fragments.js` for direction detection
+- [x] Register in `more-fragments.lua` via scripts dependency
+- [x] Implement `fragmentshown` event handler
+- [x] Implement `fragmenthidden` event handler
 
 ---
 
@@ -154,14 +154,14 @@ heartBeat
 | backOutRight | backOutRight | backInRight |
 | backOutUp | backOutUp | backInUp |
 
-- [ ] backInDown / backOutDown
-- [ ] backInLeft / backOutLeft
-- [ ] backInRight / backOutRight
-- [ ] backInUp / backOutUp
-- [ ] backOutDown / backInDown
-- [ ] backOutLeft / backInLeft
-- [ ] backOutRight / backInRight
-- [ ] backOutUp / backInUp
+- [x] backInDown / backOutDown
+- [x] backInLeft / backOutLeft
+- [x] backInRight / backOutRight
+- [x] backInUp / backOutUp
+- [x] backOutDown / backInDown
+- [x] backOutLeft / backInLeft
+- [x] backOutRight / backInRight
+- [x] backOutUp / backInUp
 
 **Add to example.qmd:**
 
@@ -220,16 +220,16 @@ backOutUp
 | bounceOutRight | bounceOutRight | bounceInRight |
 | bounceOutUp | bounceOutUp | bounceInUp |
 
-- [ ] bounceIn / bounceOut
-- [ ] bounceInDown / bounceOutDown
-- [ ] bounceInLeft / bounceOutLeft
-- [ ] bounceInRight / bounceOutRight
-- [ ] bounceInUp / bounceOutUp
-- [ ] bounceOut / bounceIn
-- [ ] bounceOutDown / bounceInDown
-- [ ] bounceOutLeft / bounceInLeft
-- [ ] bounceOutRight / bounceInRight
-- [ ] bounceOutUp / bounceInUp
+- [x] bounceIn / bounceOut
+- [x] bounceInDown / bounceOutDown
+- [x] bounceInLeft / bounceOutLeft
+- [x] bounceInRight / bounceOutRight
+- [x] bounceInUp / bounceOutUp
+- [x] bounceOut / bounceIn
+- [x] bounceOutDown / bounceInDown
+- [x] bounceOutLeft / bounceInLeft
+- [x] bounceOutRight / bounceInRight
+- [x] bounceOutUp / bounceInUp
 
 **Add to example.qmd:**
 
@@ -299,19 +299,19 @@ bounceOutUp
 | fadeInBottomLeft | fadeInBottomLeft | fadeOutBottomLeft |
 | fadeInBottomRight | fadeInBottomRight | fadeOutBottomRight |
 
-- [ ] fadeIn / fadeOut
-- [ ] fadeInDown / fadeOutDown
-- [ ] fadeInDownBig / fadeOutDownBig
-- [ ] fadeInLeft / fadeOutLeft
-- [ ] fadeInLeftBig / fadeOutLeftBig
-- [ ] fadeInRight / fadeOutRight
-- [ ] fadeInRightBig / fadeOutRightBig
-- [ ] fadeInUp / fadeOutUp
-- [ ] fadeInUpBig / fadeOutUpBig
-- [ ] fadeInTopLeft / fadeOutTopLeft
-- [ ] fadeInTopRight / fadeOutTopRight
-- [ ] fadeInBottomLeft / fadeOutBottomLeft
-- [ ] fadeInBottomRight / fadeOutBottomRight
+- [x] fadeIn / fadeOut
+- [x] fadeInDown / fadeOutDown
+- [x] fadeInDownBig / fadeOutDownBig
+- [x] fadeInLeft / fadeOutLeft
+- [x] fadeInLeftBig / fadeOutLeftBig
+- [x] fadeInRight / fadeOutRight
+- [x] fadeInRightBig / fadeOutRightBig
+- [x] fadeInUp / fadeOutUp
+- [x] fadeInUpBig / fadeOutUpBig
+- [x] fadeInTopLeft / fadeOutTopLeft
+- [x] fadeInTopRight / fadeOutTopRight
+- [x] fadeInBottomLeft / fadeOutBottomLeft
+- [x] fadeInBottomRight / fadeOutBottomRight
 
 **Add to example.qmd:**
 
@@ -449,11 +449,11 @@ fadeOutBottomRight
 | flipOutX | flipOutX | flipInX |
 | flipOutY | flipOutY | flipInY |
 
-- [ ] flip (attention seeker style)
-- [ ] flipInX / flipOutX
-- [ ] flipInY / flipOutY
-- [ ] flipOutX / flipInX
-- [ ] flipOutY / flipInY
+- [x] flip (attention seeker style)
+- [x] flipInX / flipOutX
+- [x] flipInY / flipOutY
+- [x] flipOutX / flipInX
+- [x] flipOutY / flipInY
 
 **Add to example.qmd:**
 
@@ -492,10 +492,10 @@ flipOutY
 | lightSpeedOutRight | lightSpeedOutRight | lightSpeedInRight |
 | lightSpeedOutLeft | lightSpeedOutLeft | lightSpeedInLeft |
 
-- [ ] lightSpeedInRight / lightSpeedOutRight
-- [ ] lightSpeedInLeft / lightSpeedOutLeft
-- [ ] lightSpeedOutRight / lightSpeedInRight
-- [ ] lightSpeedOutLeft / lightSpeedInLeft
+- [x] lightSpeedInRight / lightSpeedOutRight
+- [x] lightSpeedInLeft / lightSpeedOutLeft
+- [x] lightSpeedOutRight / lightSpeedInRight
+- [x] lightSpeedOutLeft / lightSpeedInLeft
 
 **Add to example.qmd:**
 
@@ -803,3 +803,7 @@ _extensions/more-fragments/
 - Animation duration default: 1s (can be customized via CSS variables)
 - Consider adding utility classes for speed: `slower`, `slow`, `fast`, `faster`
 - Consider adding delay utility classes: `delay-1s`, `delay-2s`, etc.
+
+## Documentation TODO
+
+- [ ] Document reversible fragment naming convention: animations reverse by exiting the way they came in (e.g., `backInDown` reverses to `backOutUp`, not `backOutDown`)

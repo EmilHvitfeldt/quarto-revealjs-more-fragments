@@ -305,6 +305,24 @@ flipOutX
 flipOutY
 :::
 
+## Lightspeed
+
+::: {.fragment .lightSpeedInRight}
+lightSpeedInRight
+:::
+
+::: {.fragment .lightSpeedInLeft}
+lightSpeedInLeft
+:::
+
+::: {.fragment .lightSpeedOutRight}
+lightSpeedOutRight
+:::
+
+::: {.fragment .lightSpeedOutLeft}
+lightSpeedOutLeft
+:::
+
 ## Inline Examples
 
 This sentence has a [bouncing]{.fragment .bounce} word in it.

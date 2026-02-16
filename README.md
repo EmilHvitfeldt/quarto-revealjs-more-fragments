@@ -78,6 +78,37 @@ The slide becomes visible when navigated to, but all content (header + body) sta
 | `.fragment` | Animates only the header text; content appears immediately |
 | `.fragment-slide` | Animates header and content together as one fragment |
 
+### Letter-by-Letter Animations
+
+Animate text character by character with `.fragment-letters`:
+
+```markdown
+[Hello World]{.fragment-letters .bounceIn}
+```
+
+Each letter animates in sequence with a staggered delay, all triggered by a single fragment step.
+
+**Speed control for letter stagger:**
+
+```markdown
+[Fast text]{.fragment-letters .fadeIn .letter-fast}
+[Slow reveal]{.fragment-letters .zoomIn .letter-slower}
+```
+
+| Class | Delay Between Letters |
+|-------|----------------------|
+| `letter-faster` | 20ms |
+| `letter-fast` | 35ms |
+| (default) | 50ms |
+| `letter-slow` | 80ms |
+| `letter-slower` | 120ms |
+
+You can also combine with animation speed utilities:
+
+```markdown
+[Quick bounce letters]{.fragment-letters .bounceIn .faster .letter-fast}
+```
+
 For full documentation and examples, visit the [documentation site](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/).
 
 ## Available Animations

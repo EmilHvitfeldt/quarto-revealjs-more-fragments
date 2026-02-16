@@ -1,6 +1,52 @@
 // More Fragments - Direction detection for entrance/exit animation pairs
 
 (function() {
+  // ==========================================================================
+  // Letter-by-Letter Animation Configuration
+  // ==========================================================================
+
+  const LETTER_DELAY_MS = 50;  // Default delay between letters
+
+  const LETTER_DELAYS = {
+    'letter-faster': 20,
+    'letter-fast': 35,
+    'letter-slow': 80,
+    'letter-slower': 120
+  };
+
+  // Get delay for a letter fragment
+  function getLetterDelay(element) {
+    for (const [cls, delay] of Object.entries(LETTER_DELAYS)) {
+      if (element.classList.contains(cls)) {
+        return delay;
+      }
+    }
+    return LETTER_DELAY_MS;
+  }
+
+  // Check if this is a letter container fragment
+  function isLetterContainer(element) {
+    return element.classList.contains('letter-container');
+  }
+
+  // Get all letter characters in a container, sorted by index
+  function getLettersInContainer(container) {
+    const letters = Array.from(container.querySelectorAll('.letter-char'));
+
+    // Sort by letter-index
+    letters.sort((a, b) => {
+      const aIdx = parseInt(a.getAttribute('data-letter-index') || '0');
+      const bIdx = parseInt(b.getAttribute('data-letter-index') || '0');
+      return aIdx - bIdx;
+    });
+
+    return letters;
+  }
+
+  // ==========================================================================
+  // Animation Pairs Configuration
+  // ==========================================================================
+
   // Mapping of entrance animations to their exit counterparts
   const animationPairs = {
     // Back animations (reverse direction: exit the way it came in)
@@ -197,6 +243,27 @@
     // Fragment shown - forward navigation
     Reveal.on('fragmentshown', function(event) {
       const fragment = event.fragment;
+
+      // Handle letter-by-letter animations (container-based)
+      if (isLetterContainer(fragment)) {
+        const letters = getLettersInContainer(fragment);
+        if (letters.length === 0) return;
+
+        const delay = getLetterDelay(fragment);
+
+        letters.forEach(function(letter, index) {
+          setTimeout(function() {
+            const animClass = getAnimationClass(letter);
+            if (animClass && animationPairs[animClass]) {
+              applyAnimation(letter, animClass, false);
+            }
+            letter.classList.add('letter-visible');
+          }, index * delay);
+        });
+        return;
+      }
+
+      // Handle regular fragments
       const fragments = getFragmentsWithSameIndex(fragment);
 
       fragments.forEach(function(frag) {
@@ -210,6 +277,30 @@
     // Fragment hidden - backward navigation
     Reveal.on('fragmenthidden', function(event) {
       const fragment = event.fragment;
+
+      // Handle letter-by-letter animations (reverse order, container-based)
+      if (isLetterContainer(fragment)) {
+        const letters = getLettersInContainer(fragment);
+        if (letters.length === 0) return;
+
+        const delay = getLetterDelay(fragment);
+
+        // Reverse the array for backwards animation
+        const reversedLetters = [...letters].reverse();
+
+        reversedLetters.forEach(function(letter, index) {
+          setTimeout(function() {
+            const animClass = getAnimationClass(letter);
+            if (animClass && animationPairs[animClass]) {
+              applyAnimation(letter, animationPairs[animClass], true);
+            }
+            letter.classList.remove('letter-visible');
+          }, index * delay);
+        });
+        return;
+      }
+
+      // Handle regular fragments
       const fragments = getFragmentsWithSameIndex(fragment);
 
       fragments.forEach(function(frag) {

@@ -475,12 +475,77 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">quick</span><span class="co">]</span>{.fragment .pulse} <span class="co">[</span><span class="ot">brown</span><span class="co">]</span>{.fragment .tada} <span class="co">[</span><span class="ot">fox</span><span class="co">]</span>{.fragment .wobble} jumps over the lazy dog.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+<section id="letter-by-letter-animations" class="level2">
+<h2 class="anchored" data-anchor-id="letter-by-letter-animations">Letter-by-Letter Animations</h2>
+<p>Animate text character by character with <code>.fragment-letters</code>. Each letter animates in sequence with a staggered delay, all triggered by a single fragment step (one click/keypress).</p>
+<section id="basic-usage" class="level3">
+<h3 class="anchored" data-anchor-id="basic-usage">Basic Usage</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Hello World</span><span class="co">]</span>{.fragment-letters .bounceIn}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Welcome to RevealJS</span><span class="co">]</span>{.fragment-letters .fadeIn}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="on-headers" class="level3">
+<h3 class="anchored" data-anchor-id="on-headers">On Headers</h3>
+<p>Letter animations work on headers too:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Animated Title {.fragment-letters .bounceIn}</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section Header {.fragment-letters .zoomIn}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="letter-speed-control" class="level3">
+<h3 class="anchored" data-anchor-id="letter-speed-control">Letter Speed Control</h3>
+<p>Control the stagger delay between letters with letter speed classes:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Fast typing</span><span class="co">]</span>{.fragment-letters .fadeIn .letter-fast}</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Slow reveal</span><span class="co">]</span>{.fragment-letters .zoomIn .letter-slower}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>Delay Between Letters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>letter-faster</code></td>
+<td>20ms</td>
+</tr>
+<tr class="even">
+<td><code>letter-fast</code></td>
+<td>35ms</td>
+</tr>
+<tr class="odd">
+<td>(default)</td>
+<td>50ms</td>
+</tr>
+<tr class="even">
+<td><code>letter-slow</code></td>
+<td>80ms</td>
+</tr>
+<tr class="odd">
+<td><code>letter-slower</code></td>
+<td>120ms</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="combining-with-animation-speed" class="level3">
+<h3 class="anchored" data-anchor-id="combining-with-animation-speed">Combining with Animation Speed</h3>
+<p>You can combine letter stagger speed with animation duration:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Quick bounce</span><span class="co">]</span>{.fragment-letters .bounceIn .faster .letter-fast}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Slow dramatic zoom</span><span class="co">]</span>{.fragment-letters .zoomIn .slow .letter-slower}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>letter-*</code> classes control the delay between each letter starting</li>
+<li><code>faster</code>/<code>slow</code> etc. control how long each letter’s animation takes</li>
+</ul>
+</section>
+</section>
 <section id="speed-utilities" class="level2">
 <h2 class="anchored" data-anchor-id="speed-utilities">Speed Utilities</h2>
 <p>Control animation speed by adding a speed class alongside the animation:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::: {.fragment .bounceIn .fast}</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>This bounces in quickly!</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>::: {.fragment .bounceIn .fast}</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>This bounces in quickly!</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
 <thead>
 <tr class="header">

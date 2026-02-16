@@ -659,3 +659,79 @@
 .reveal .slides section .fragment.faster {
   animation-duration: 500ms;
 }
+
+/* ==========================================================================
+   Letter-by-Letter Animations
+   ========================================================================== */
+
+/* Container for letter animations - this is the fragment */
+.reveal .slides section .letter-container {
+  display: inline;
+  white-space: pre-wrap;
+}
+
+/* Override default fragment visibility for letter containers */
+.reveal .slides section .letter-container.fragment {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Individual letter characters - inline-block for transforms */
+.reveal .slides section .letter-char {
+  display: inline-block;
+}
+
+/* Initial hidden state for letter entrance animations */
+.reveal .slides section .letter-char.bounceIn,
+.reveal .slides section .letter-char.bounceInDown,
+.reveal .slides section .letter-char.bounceInLeft,
+.reveal .slides section .letter-char.bounceInRight,
+.reveal .slides section .letter-char.bounceInUp,
+.reveal .slides section .letter-char.fadeIn,
+.reveal .slides section .letter-char.fadeInDown,
+.reveal .slides section .letter-char.fadeInDownBig,
+.reveal .slides section .letter-char.fadeInLeft,
+.reveal .slides section .letter-char.fadeInLeftBig,
+.reveal .slides section .letter-char.fadeInRight,
+.reveal .slides section .letter-char.fadeInRightBig,
+.reveal .slides section .letter-char.fadeInUp,
+.reveal .slides section .letter-char.fadeInUpBig,
+.reveal .slides section .letter-char.fadeInTopLeft,
+.reveal .slides section .letter-char.fadeInTopRight,
+.reveal .slides section .letter-char.fadeInBottomLeft,
+.reveal .slides section .letter-char.fadeInBottomRight,
+.reveal .slides section .letter-char.zoomIn,
+.reveal .slides section .letter-char.zoomInDown,
+.reveal .slides section .letter-char.zoomInLeft,
+.reveal .slides section .letter-char.zoomInRight,
+.reveal .slides section .letter-char.zoomInUp,
+.reveal .slides section .letter-char.rotateIn,
+.reveal .slides section .letter-char.rotateInDownLeft,
+.reveal .slides section .letter-char.rotateInDownRight,
+.reveal .slides section .letter-char.rotateInUpLeft,
+.reveal .slides section .letter-char.rotateInUpRight,
+.reveal .slides section .letter-char.slideInDown,
+.reveal .slides section .letter-char.slideInLeft,
+.reveal .slides section .letter-char.slideInRight,
+.reveal .slides section .letter-char.slideInUp,
+.reveal .slides section .letter-char.backInDown,
+.reveal .slides section .letter-char.backInLeft,
+.reveal .slides section .letter-char.backInRight,
+.reveal .slides section .letter-char.backInUp,
+.reveal .slides section .letter-char.flipInX,
+.reveal .slides section .letter-char.flipInY,
+.reveal .slides section .letter-char.lightSpeedInLeft,
+.reveal .slides section .letter-char.lightSpeedInRight,
+.reveal .slides section .letter-char.jackInTheBox,
+.reveal .slides section .letter-char.rollIn {
+  opacity: 0;
+}
+
+/* Visible state for letter characters */
+.reveal .slides section .letter-char.letter-visible {
+  opacity: 1;
+}
+
+/* Letter speed utility classes - these affect the stagger delay via JS */
+/* The classes are: letter-faster, letter-fast, letter-slow, letter-slower */
+/* Delays: 20ms, 35ms, 80ms, 120ms (default is 50ms) */

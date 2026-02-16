@@ -272,6 +272,48 @@ barplot(table(mtcars$cyl), col = c("coral", "steelblue", "seagreen"),
 
 The title and plot animate together as one fragment.
 
+## Letter-by-Letter Animations
+
+Text can animate letter by letter with a single fragment step:
+
+[Hello World]{.fragment-letters .bounceIn}
+
+[Welcome to RevealJS]{.fragment-letters .fadeIn}
+
+## Letter Animation Speeds
+
+Control the stagger delay between letters:
+
+[Fast typing]{.fragment-letters .fadeIn .letter-fast}
+
+[Default speed]{.fragment-letters .fadeIn}
+
+[Slow reveal]{.fragment-letters .zoomIn .letter-slow}
+
+## Different Letter Animations
+
+Various animation styles work with letters:
+
+[Bounce effect]{.fragment-letters .bounceIn}
+
+[Zoom from small]{.fragment-letters .zoomIn}
+
+[Slide from left]{.fragment-letters .slideInLeft}
+
+[Rotate in]{.fragment-letters .rotateIn}
+
+## Letters with Speed Utilities
+
+Combine letter animations with animation speed:
+
+[Quick bounce]{.fragment-letters .bounceIn .faster .letter-fast}
+
+[Slow zoom]{.fragment-letters .zoomIn .slow .letter-slower}
+
+# Header animation {.fragment-letters .bounceIn}
+
+Letter-by-letter works on headers too!
+
 ## Learn More
 
 ::: {.fragment .backInUp}

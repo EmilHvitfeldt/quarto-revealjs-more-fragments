@@ -168,6 +168,59 @@ This sentence has a [bouncing]{.fragment .bounce} word in it.
 The [quick]{.fragment .pulse} [brown]{.fragment .tada} [fox]{.fragment .wobble} jumps over the lazy dog.
 ```
 
+## Letter-by-Letter Animations
+
+Animate text character by character with `.fragment-letters`. Each letter animates in sequence with a staggered delay, all triggered by a single fragment step (one click/keypress).
+
+### Basic Usage
+
+```markdown
+[Hello World]{.fragment-letters .bounceIn}
+
+[Welcome to RevealJS]{.fragment-letters .fadeIn}
+```
+
+### On Headers
+
+Letter animations work on headers too:
+
+```markdown
+# Animated Title {.fragment-letters .bounceIn}
+
+## Section Header {.fragment-letters .zoomIn}
+```
+
+### Letter Speed Control
+
+Control the stagger delay between letters with letter speed classes:
+
+```markdown
+[Fast typing]{.fragment-letters .fadeIn .letter-fast}
+
+[Slow reveal]{.fragment-letters .zoomIn .letter-slower}
+```
+
+| Class | Delay Between Letters |
+|-------|----------------------|
+| `letter-faster` | 20ms |
+| `letter-fast` | 35ms |
+| (default) | 50ms |
+| `letter-slow` | 80ms |
+| `letter-slower` | 120ms |
+
+### Combining with Animation Speed
+
+You can combine letter stagger speed with animation duration:
+
+```markdown
+[Quick bounce]{.fragment-letters .bounceIn .faster .letter-fast}
+
+[Slow dramatic zoom]{.fragment-letters .zoomIn .slow .letter-slower}
+```
+
+- `letter-*` classes control the delay between each letter starting
+- `faster`/`slow` etc. control how long each letter's animation takes
+
 ## Speed Utilities
 
 Control animation speed by adding a speed class alongside the animation:

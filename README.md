@@ -58,7 +58,25 @@ Speed utilities work on headers too:
 ## Fast Header {.fragment .zoomIn .faster}
 ```
 
-The header text will animate as a fragment step, while the slide itself appears normally.
+The header text will animate as a fragment step, while the slide content appears normally.
+
+### Whole-Slide Animations
+
+To animate an entire slide (header and all content together), use `.fragment-slide`:
+
+```markdown
+## Animated Slide {.fragment-slide .fadeIn}
+
+This entire slide animates as one unit.
+All content appears together with the header.
+```
+
+The slide becomes visible when navigated to, but all content (header + body) starts hidden and animates in together as one fragment step.
+
+| Class | Effect |
+|-------|--------|
+| `.fragment` | Animates only the header text; content appears immediately |
+| `.fragment-slide` | Animates header and content together as one fragment |
 
 For full documentation and examples, visit the [documentation site](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/).
 

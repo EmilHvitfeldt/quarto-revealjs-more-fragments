@@ -9,7 +9,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(curl:*)",
       "Bash(gh api:*)",
-      "Bash(quarto render:*)"
+      "Bash(quarto render:*)",
+      "Bash(pandoc:*)"
     ]
   }
 }

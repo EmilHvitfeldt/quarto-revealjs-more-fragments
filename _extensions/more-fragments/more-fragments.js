@@ -182,25 +182,42 @@
     window.addEventListener('load', setupReveal);
   }
 
+  // Get all fragments with the same index in the current slide
+  function getFragmentsWithSameIndex(fragment) {
+    const index = fragment.getAttribute('data-fragment-index');
+    if (index === null) return [fragment];
+
+    const slide = fragment.closest('section');
+    if (!slide) return [fragment];
+
+    return Array.from(slide.querySelectorAll(`.fragment[data-fragment-index="${index}"]`));
+  }
+
   function initMoreFragments() {
     // Fragment shown - forward navigation
     Reveal.on('fragmentshown', function(event) {
       const fragment = event.fragment;
-      const animClass = getAnimationClass(fragment);
+      const fragments = getFragmentsWithSameIndex(fragment);
 
-      if (animClass && animationPairs[animClass]) {
-        applyAnimation(fragment, animClass, false);
-      }
+      fragments.forEach(function(frag) {
+        const animClass = getAnimationClass(frag);
+        if (animClass && animationPairs[animClass]) {
+          applyAnimation(frag, animClass, false);
+        }
+      });
     });
 
     // Fragment hidden - backward navigation
     Reveal.on('fragmenthidden', function(event) {
       const fragment = event.fragment;
-      const animClass = getAnimationClass(fragment);
+      const fragments = getFragmentsWithSameIndex(fragment);
 
-      if (animClass && animationPairs[animClass]) {
-        applyAnimation(fragment, animationPairs[animClass], true);
-      }
+      fragments.forEach(function(frag) {
+        const animClass = getAnimationClass(frag);
+        if (animClass && animationPairs[animClass]) {
+          applyAnimation(frag, animationPairs[animClass], true);
+        }
+      });
     });
   }
 })();

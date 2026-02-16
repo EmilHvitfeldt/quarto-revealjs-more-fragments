@@ -201,6 +201,14 @@ Speed utilities work on headers:
 `## Fast Header {.fragment .zoomIn .faster}`
 :::
 
+## Whole Slide Animation {.fragment-slide .bounceIn}
+
+This entire slide animates as a single fragment.
+
+Both the header and content animate together.
+
+Use `.fragment-slide` instead of `.fragment`.
+
 ## Learn More
 
 ::: {.fragment .backInUp}

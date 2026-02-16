@@ -208,7 +208,7 @@
 <div class="fragment bounceIn">
 <p>Animations are powered by <a href="https://animate.style/">Animate.css</a></p>
 </div>
-<div class="fragment fadeIn">
+<div class="fragment backInUp">
 <p>All animations work <strong>forwards</strong> and <strong>backwards</strong>!</p>
 </div>
 </section>
@@ -225,9 +225,9 @@
 <section id="inline-animations" class="slide level2">
 <h2>Inline Animations</h2>
 <p>Animations work on inline elements too:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href=""></a>The <span class="co">[</span><span class="ot">quick</span><span class="co">]</span>{.fragment .fadeIn} <span class="co">[</span><span class="ot">brown</span><span class="co">]</span>{.fragment .tada}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href=""></a>The <span class="co">[</span><span class="ot">quick</span><span class="co">]</span>{.fragment .backInUp} <span class="co">[</span><span class="ot">brown</span><span class="co">]</span>{.fragment .tada}</span>
 <span id="cb2-2"><a href=""></a><span class="co">[</span><span class="ot">fox</span><span class="co">]</span>{.fragment .bounceIn} jumps.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <span class="fragment fadeIn">quick</span> <span class="fragment tada">brown</span> <span class="fragment bounceIn">fox</span> jumps over the lazy dog.</p>
+<p>The <span class="fragment backInUp">quick</span> <span class="fragment tada">brown</span> <span class="fragment bounceIn">fox</span> jumps over the lazy dog.</p>
 </section>
 <section id="attention-seekers" class="slide level2">
 <h2>Attention Seekers</h2>
@@ -260,8 +260,8 @@
 <p>Elements appear with directional movement:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="fragment fadeInDown">
-<p>fadeInDown</p>
+<div class="fragment backInUpDown">
+<p>backInUpDown</p>
 </div>
 <div class="fragment bounceInLeft">
 <p>bounceInLeft</p>
@@ -329,22 +329,36 @@
 <section id="reversible-behavior" class="slide level2">
 <h2>Reversible Behavior</h2>
 <p>All animations reverse naturally when navigating backwards.</p>
-<div class="fragment backInDown">
-<p><code>backInDown</code> enters from top…</p>
+<div class="fragment backInUpDown">
+<p><code>backInUpDown</code> enters from top…</p>
 </div>
-<div class="fragment fadeIn">
+<div class="fragment backInUp">
 <p>…and exits back to top with <code>backOutUp</code></p>
 </div>
 <div class="fragment slideInLeft">
 <p>Try pressing the <strong>left arrow</strong> to see animations reverse!</p>
 </div>
 </section>
+<section id="header-animations" class="slide level2">
+<h2><span class="fragment bounceIn">Header Animations</span></h2>
+<p>Headers can now be animated as fragments too!</p>
+<div class="fragment fadeIn">
+<p>Use the same syntax: <code>## Title {.fragment .bounceIn}</code></p>
+</div>
+</section>
+<section id="fast-header" class="slide level2">
+<h2><span class="fragment zoomIn faster">Fast Header</span></h2>
+<p>Speed utilities work on headers:</p>
+<div class="fragment backInUp">
+<p><code>## Fast Header {.fragment .zoomIn .faster}</code></p>
+</div>
+</section>
 <section id="learn-more" class="slide level2">
 <h2>Learn More</h2>
-<div class="fragment fadeIn">
+<div class="fragment backInUp">
 <p>See the <a href="animations.html">full animation gallery</a> for all available animations.</p>
 </div>
-<div class="fragment fadeIn">
+<div class="fragment backInUp">
 <p>Visit <a href="https://animate.style/">Animate.css</a> for animation documentation.</p>
 </div>
 

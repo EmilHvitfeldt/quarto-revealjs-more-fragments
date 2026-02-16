@@ -22,9 +22,11 @@ You can enable this like:
 ---
 title: Simple more-fragments setup
 filters:
-   - more-fragments
+   - _extensions/more-fragments/more-fragments.lua
 ---
 ```
+
+> **Note:** Using the direct filter path (rather than just `- more-fragments`) enables all features including header animations.
 
 Then use any animation class with `.fragment`:
 
@@ -39,6 +41,24 @@ Animations also work on inline elements:
 ```markdown
 This sentence has a [bouncing]{.fragment .bounce} word in it.
 ```
+
+### Header Animations
+
+You can animate slide headers as fragments:
+
+```markdown
+## My Animated Title {.fragment .bounceIn}
+
+Content that appears after the header animates in.
+```
+
+Speed utilities work on headers too:
+
+```markdown
+## Fast Header {.fragment .zoomIn .faster}
+```
+
+The header text will animate as a fragment step, while the slide itself appears normally.
 
 For full documentation and examples, visit the [documentation site](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/).
 

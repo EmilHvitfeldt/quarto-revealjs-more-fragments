@@ -3,7 +3,7 @@ title: "More Fragments"
 subtitle: "Additional fragment animations for RevealJS"
 format: revealjs
 filters:
-  - more-fragments
+  - ../_extensions/more-fragments/more-fragments.lua
 ---
 
 ## What is this?
@@ -14,7 +14,7 @@ This extension provides additional fragment animations for RevealJS presentation
 Animations are powered by [Animate.css](https://animate.style/)
 :::
 
-::: {.fragment .fadeIn}
+::: {.fragment .backInUp}
 All animations work **forwards** and **backwards**!
 :::
 
@@ -37,11 +37,11 @@ This text bounces in!
 Animations work on inline elements too:
 
 ```markdown
-The [quick]{.fragment .fadeIn} [brown]{.fragment .tada}
+The [quick]{.fragment .backInUp} [brown]{.fragment .tada}
 [fox]{.fragment .bounceIn} jumps.
 ```
 
-The [quick]{.fragment .fadeIn} [brown]{.fragment .tada} [fox]{.fragment .bounceIn} jumps over the lazy dog.
+The [quick]{.fragment .backInUp} [brown]{.fragment .tada} [fox]{.fragment .bounceIn} jumps over the lazy dog.
 
 ## Attention Seekers
 
@@ -83,8 +83,8 @@ Elements appear with directional movement:
 
 :::: {.columns}
 ::: {.column width="50%"}
-::: {.fragment .fadeInDown}
-fadeInDown
+::: {.fragment .backInUpDown}
+backInUpDown
 :::
 
 ::: {.fragment .bounceInLeft}
@@ -173,11 +173,11 @@ faster (500ms)
 
 All animations reverse naturally when navigating backwards.
 
-::: {.fragment .backInDown}
-`backInDown` enters from top...
+::: {.fragment .backInUpDown}
+`backInUpDown` enters from top...
 :::
 
-::: {.fragment .fadeIn}
+::: {.fragment .backInUp}
 ...and exits back to top with `backOutUp`
 :::
 
@@ -185,12 +185,28 @@ All animations reverse naturally when navigating backwards.
 Try pressing the **left arrow** to see animations reverse!
 :::
 
-## Learn More
+## Header Animations {.fragment .bounceIn}
+
+Headers can now be animated as fragments too!
 
 ::: {.fragment .fadeIn}
+Use the same syntax: `## Title {.fragment .bounceIn}`
+:::
+
+## Fast Header {.fragment .zoomIn .faster}
+
+Speed utilities work on headers:
+
+::: {.fragment .backInUp}
+`## Fast Header {.fragment .zoomIn .faster}`
+:::
+
+## Learn More
+
+::: {.fragment .backInUp}
 See the [full animation gallery](animations.html) for all available animations.
 :::
 
-::: {.fragment .fadeIn}
+::: {.fragment .backInUp}
 Visit [Animate.css](https://animate.style/) for animation documentation.
 :::

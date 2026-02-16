@@ -361,6 +361,76 @@
 <p>Use <code>.fragment-slide</code> instead of <code>.fragment</code>.</p>
 </div>
 </section>
+<section id="animated-plots" class="slide level2">
+<h2>Animated Plots</h2>
+<p>Wrap code chunks in fragment divs to animate plots:</p>
+<div class="fragment zoomIn">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="example_files/figure-revealjs/unnamed-chunk-1-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment bounceIn">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="example_files/figure-revealjs/unnamed-chunk-2-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sequential-plot-animations" class="slide level2">
+<h2>Sequential Plot Animations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment fadeInLeft">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="example_files/figure-revealjs/unnamed-chunk-3-1.png" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment fadeInRight">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="example_files/figure-revealjs/unnamed-chunk-4-1.png" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="whole-slide-with-plot" class="slide level2">
+<h2><span class="fragment fadeIn" data-fragment-index="0">Whole Slide with Plot</span></h2>
+<div class="fragment fadeIn" data-fragment-index="0">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="example_files/figure-revealjs/unnamed-chunk-5-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The title and plot animate together as one fragment.</p>
+</div>
+</section>
 <section id="learn-more" class="slide level2">
 <h2>Learn More</h2>
 <div class="fragment backInUp">
@@ -586,6 +656,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

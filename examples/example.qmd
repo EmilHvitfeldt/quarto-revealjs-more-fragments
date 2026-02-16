@@ -209,6 +209,69 @@ Both the header and content animate together.
 
 Use `.fragment-slide` instead of `.fragment`.
 
+## Animated Plots
+
+Wrap code chunks in fragment divs to animate plots:
+
+::: {.fragment .zoomIn}
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+plot(pressure, main = "Pressure Data")
+```
+:::
+
+::: {.fragment .bounceIn}
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 3
+hist(mtcars$mpg, main = "MPG Distribution", col = "steelblue")
+```
+:::
+
+## Sequential Plot Animations
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.fragment .fadeInLeft}
+```{r}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+plot(mtcars$mpg, mtcars$hp, pch = 19, col = "darkred",
+     xlab = "MPG", ylab = "Horsepower")
+```
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment .fadeInRight}
+```{r}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+plot(mtcars$wt, mtcars$qsec, pch = 19, col = "darkblue",
+     xlab = "Weight", ylab = "Quarter Mile Time")
+```
+:::
+:::
+::::
+
+## Whole Slide with Plot {.fragment-slide .fadeIn}
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-height: 4
+#| fig-align: center
+barplot(table(mtcars$cyl), col = c("coral", "steelblue", "seagreen"),
+        main = "Cars by Cylinder Count", xlab = "Cylinders", ylab = "Count")
+```
+
+The title and plot animate together as one fragment.
+
 ## Learn More
 
 ::: {.fragment .backInUp}

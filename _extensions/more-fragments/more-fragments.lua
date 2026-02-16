@@ -30,6 +30,77 @@ local function is_letter_speed_class(cls)
          cls == 'letter-slow' or cls == 'letter-slower'
 end
 
+-- Helper function to check if a class list contains a specific class
+local function has_class(classes, target)
+  for _, cls in ipairs(classes) do
+    if cls == target then
+      return true
+    end
+  end
+  return false
+end
+
+-- Extract animation, speed, and letter-speed classes from a class list
+-- Returns: animation_class, speed_class, letter_speed, other_classes
+local function extract_letter_classes(classes)
+  local animation_class = nil
+  local speed_class = nil
+  local letter_speed = nil
+  local other_classes = pandoc.List({})
+
+  for _, cls in ipairs(classes) do
+    if cls == 'fragment-letters' then
+      -- skip
+    elseif is_animation_class(cls) then
+      animation_class = cls
+    elseif is_speed_class(cls) then
+      speed_class = cls
+    elseif is_letter_speed_class(cls) then
+      letter_speed = cls
+    else
+      other_classes:insert(cls)
+    end
+  end
+
+  return animation_class, speed_class, letter_speed, other_classes
+end
+
+-- Create letter spans from text with animation classes
+-- Returns: letter_spans list, container_classes list
+local function create_letter_spans(text, animation_class, speed_class, letter_speed)
+  local letter_spans = pandoc.List({})
+  local letter_index = 0
+
+  -- Iterate through UTF-8 characters
+  for char in text:gmatch('[%z\1-\127\194-\244][\128-\191]*') do
+    if char == ' ' then
+      -- Preserve spaces but don't animate them
+      letter_spans:insert(pandoc.Space())
+    else
+      -- Build classes for this letter
+      local classes = pandoc.List({'letter-char'})
+      if animation_class then classes:insert(animation_class) end
+      if speed_class then classes:insert(speed_class) end
+
+      -- Build attributes
+      local attrs = {
+        ['data-letter-index'] = tostring(letter_index)
+      }
+
+      local span = pandoc.Span({pandoc.Str(char)}, pandoc.Attr('', classes, attrs))
+      letter_spans:insert(span)
+      letter_index = letter_index + 1
+    end
+  end
+
+  -- Build container classes
+  local container_classes = pandoc.List({'fragment', 'letter-container'})
+  if animation_class then container_classes:insert(animation_class) end
+  if letter_speed then container_classes:insert(letter_speed) end
+
+  return letter_spans, container_classes
+end
+
 -- Extract fragment classes from a list
 local function extract_fragment_classes(classes)
   local fragment_classes = pandoc.List({})
@@ -50,77 +121,23 @@ end
 
 -- Process a Span element for letter-by-letter animation
 local function process_letter_span(el)
-  -- Check if span has fragment-letters class
-  local has_fragment_letters = false
-  for _, cls in ipairs(el.classes) do
-    if cls == 'fragment-letters' then
-      has_fragment_letters = true
-      break
-    end
-  end
-
-  if not has_fragment_letters then
+  if not has_class(el.classes, 'fragment-letters') then
     return nil
-  end
-
-  -- Extract animation, speed, and letter-speed classes
-  local animation_class = nil
-  local speed_class = nil
-  local letter_speed = nil
-  local other_classes = pandoc.List({})
-
-  for _, cls in ipairs(el.classes) do
-    if cls == 'fragment-letters' then
-      -- skip, we'll add 'fragment' and 'letter-fragment' to each letter
-    elseif is_animation_class(cls) then
-      animation_class = cls
-    elseif is_speed_class(cls) then
-      speed_class = cls
-    elseif is_letter_speed_class(cls) then
-      letter_speed = cls
-    else
-      other_classes:insert(cls)
-    end
   end
 
   -- Get text content
   local text = pandoc.utils.stringify(el.content)
-
-  -- Skip if empty
   if text == '' then
     return nil
   end
 
-  -- Split into characters and create spans
-  local letter_spans = pandoc.List({})
-  local letter_index = 0
+  -- Extract classes
+  local animation_class, speed_class, letter_speed, other_classes = extract_letter_classes(el.classes)
 
-  -- Iterate through UTF-8 characters
-  for char in text:gmatch('[%z\1-\127\194-\244][\128-\191]*') do
-    if char == ' ' then
-      -- Preserve spaces but don't animate them
-      letter_spans:insert(pandoc.Space())
-    else
-      -- Build classes for this letter (no .fragment - container handles that)
-      local classes = pandoc.List({'letter-char'})
-      if animation_class then classes:insert(animation_class) end
-      if speed_class then classes:insert(speed_class) end
+  -- Create letter spans
+  local letter_spans, container_classes = create_letter_spans(text, animation_class, speed_class, letter_speed)
 
-      -- Build attributes
-      local attrs = {
-        ['data-letter-index'] = tostring(letter_index)
-      }
-
-      local span = pandoc.Span({pandoc.Str(char)}, pandoc.Attr('', classes, attrs))
-      letter_spans:insert(span)
-      letter_index = letter_index + 1
-    end
-  end
-
-  -- Wrap in container span - container is the fragment
-  local container_classes = pandoc.List({'fragment', 'letter-container'})
-  if animation_class then container_classes:insert(animation_class) end
-  if letter_speed then container_classes:insert(letter_speed) end
+  -- Add any extra classes to container
   for _, cls in ipairs(other_classes) do
     container_classes:insert(cls)
   end
@@ -139,15 +156,7 @@ local function process_doc(doc)
 
     -- Check if this is a header with fragment-slide
     if block.t == 'Header' then
-      local has_fragment_slide = false
-      for _, cls in ipairs(block.classes) do
-        if cls == 'fragment-slide' then
-          has_fragment_slide = true
-          break
-        end
-      end
-
-      if has_fragment_slide then
+      if has_class(block.classes, 'fragment-slide') then
         -- Extract fragment classes
         local fragment_classes, keep_classes = extract_fragment_classes(block.classes)
 
@@ -183,93 +192,34 @@ local function process_doc(doc)
           local wrapper = pandoc.Div(slide_content, pandoc.Attr("", fragment_classes, content_attrs))
           new_blocks:insert(wrapper)
         end
+      elseif has_class(block.classes, 'fragment-letters') then
+        -- Process header text as letter-by-letter animation
+        local text = pandoc.utils.stringify(block.content)
+
+        -- Extract classes using shared function
+        local animation_class, speed_class, letter_speed, keep_classes = extract_letter_classes(block.classes)
+
+        -- Create letter spans using shared function
+        local letter_spans, container_classes = create_letter_spans(text, animation_class, speed_class, letter_speed)
+
+        local container = pandoc.Span(letter_spans, pandoc.Attr('', container_classes, {}))
+        block.content = {container}
+        block.classes = keep_classes
+
+        new_blocks:insert(block)
+        i = i + 1
+      elseif has_class(block.classes, 'fragment') then
+        -- Header-only fragment
+        local fragment_classes, keep_classes = extract_fragment_classes(block.classes)
+        block.classes = keep_classes
+        local wrapped_content = pandoc.Span(block.content, pandoc.Attr("", fragment_classes, {}))
+        block.content = {wrapped_content}
+
+        new_blocks:insert(block)
+        i = i + 1
       else
-        -- Check for fragment-letters on header
-        local has_fragment_letters = false
-        for _, cls in ipairs(block.classes) do
-          if cls == 'fragment-letters' then
-            has_fragment_letters = true
-            break
-          end
-        end
-
-        if has_fragment_letters then
-          -- Process header text as letter-by-letter animation
-          local text = pandoc.utils.stringify(block.content)
-
-          -- Extract animation and speed classes
-          local animation_class = nil
-          local speed_class = nil
-          local letter_speed = nil
-          local keep_classes = pandoc.List({})
-
-          for _, cls in ipairs(block.classes) do
-            if cls == 'fragment-letters' then
-              -- skip
-            elseif is_animation_class(cls) then
-              animation_class = cls
-            elseif is_speed_class(cls) then
-              speed_class = cls
-            elseif is_letter_speed_class(cls) then
-              letter_speed = cls
-            else
-              keep_classes:insert(cls)
-            end
-          end
-
-          -- Split into characters and create spans
-          local letter_spans = pandoc.List({})
-          local letter_index = 0
-
-          for char in text:gmatch('[%z\1-\127\194-\244][\128-\191]*') do
-            if char == ' ' then
-              letter_spans:insert(pandoc.Space())
-            else
-              local classes = pandoc.List({'letter-char'})
-              if animation_class then classes:insert(animation_class) end
-              if speed_class then classes:insert(speed_class) end
-
-              local attrs = {
-                ['data-letter-index'] = tostring(letter_index)
-              }
-
-              local span = pandoc.Span({pandoc.Str(char)}, pandoc.Attr('', classes, attrs))
-              letter_spans:insert(span)
-              letter_index = letter_index + 1
-            end
-          end
-
-          -- Create container span
-          local container_classes = pandoc.List({'fragment', 'letter-container'})
-          if animation_class then container_classes:insert(animation_class) end
-          if letter_speed then container_classes:insert(letter_speed) end
-
-          local container = pandoc.Span(letter_spans, pandoc.Attr('', container_classes, {}))
-          block.content = {container}
-          block.classes = keep_classes
-
-          new_blocks:insert(block)
-          i = i + 1
-        else
-          -- Check for header-only fragment
-          local has_fragment = false
-          for _, cls in ipairs(block.classes) do
-            if cls == 'fragment' then
-              has_fragment = true
-              break
-            end
-          end
-
-          if has_fragment then
-            local fragment_classes, keep_classes = extract_fragment_classes(block.classes)
-            block.classes = keep_classes
-            local wrapped_content = pandoc.Span(block.content, pandoc.Attr("", fragment_classes, {}))
-            block.content = {wrapped_content}
-          end
-
-          new_blocks:insert(block)
-          i = i + 1
-        end
+        new_blocks:insert(block)
+        i = i + 1
       end
     else
       new_blocks:insert(block)

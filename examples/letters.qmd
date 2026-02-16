@@ -1,0 +1,119 @@
+---
+title: "Letter-by-Letter Animations"
+subtitle: "Character-by-character reveal effects"
+format: revealjs
+filters:
+  - ../_extensions/more-fragments/more-fragments.lua
+---
+
+## Basic Letter Animation
+
+Text animates letter by letter with a single click:
+
+[Hello World]{.fragment-letters .bounceIn}
+
+[Welcome to RevealJS]{.fragment-letters .fadeIn}
+
+## Basic Usage
+
+```markdown
+[Hello World]{.fragment-letters .bounceIn}
+
+[Welcome to RevealJS]{.fragment-letters .fadeIn}
+```
+
+Use `.fragment-letters` with any animation class.
+
+## Letter Animation Speeds
+
+Control the stagger delay between letters:
+
+[Faster (20ms)]{.fragment-letters .fadeIn .letter-faster}
+
+[Fast (35ms)]{.fragment-letters .fadeIn .letter-fast}
+
+[Default (50ms)]{.fragment-letters .fadeIn}
+
+[Slow (80ms)]{.fragment-letters .fadeIn .letter-slow}
+
+[Slower (120ms)]{.fragment-letters .fadeIn .letter-slower}
+
+## Speed Classes
+
+```markdown
+[Faster]{.fragment-letters .fadeIn .letter-faster}
+[Fast]{.fragment-letters .fadeIn .letter-fast}
+[Default]{.fragment-letters .fadeIn}
+[Slow]{.fragment-letters .fadeIn .letter-slow}
+[Slower]{.fragment-letters .fadeIn .letter-slower}
+```
+
+| Class | Delay |
+|-------|-------|
+| `letter-faster` | 20ms |
+| `letter-fast` | 35ms |
+| (default) | 50ms |
+| `letter-slow` | 80ms |
+| `letter-slower` | 120ms |
+
+## Different Animation Styles
+
+Various animations work with letters:
+
+[Bounce effect]{.fragment-letters .bounceIn}
+
+[Zoom from small]{.fragment-letters .zoomIn}
+
+[Slide from left]{.fragment-letters .slideInLeft}
+
+[Rotate in]{.fragment-letters .rotateIn}
+
+## Animation Examples
+
+```markdown
+[Bounce]{.fragment-letters .bounceIn}
+[Zoom]{.fragment-letters .zoomIn}
+[Slide]{.fragment-letters .slideInLeft}
+[Rotate]{.fragment-letters .rotateIn}
+[Fade]{.fragment-letters .fadeInUp}
+[Back]{.fragment-letters .backInDown}
+```
+
+Any Animate.css animation works!
+
+## Combining Speed Utilities
+
+Letter stagger + animation duration:
+
+[Quick bounce]{.fragment-letters .bounceIn .faster .letter-fast}
+
+[Slow dramatic zoom]{.fragment-letters .zoomIn .slow .letter-slower}
+
+## Combined Speed Syntax
+
+```markdown
+[Quick bounce]{.fragment-letters .bounceIn .faster .letter-fast}
+
+[Slow zoom]{.fragment-letters .zoomIn .slow .letter-slower}
+```
+
+- `letter-*` = delay between letters starting
+- `faster`/`slow` = animation duration per letter
+
+# Header Animation {.fragment-letters .bounceIn}
+
+Letter-by-letter works on headers too!
+
+## Header Syntax
+
+```markdown
+# Title {.fragment-letters .bounceIn}
+
+## Subtitle {.fragment-letters .zoomIn .letter-fast}
+```
+
+Same syntax as inline, just on the header line.
+
+## Another Header {.fragment-letters .zoomIn .letter-fast}
+
+Headers support all the same options.

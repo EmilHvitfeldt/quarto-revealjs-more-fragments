@@ -160,14 +160,14 @@ The slide becomes visible when navigated to, but all content (header + body) sta
 
 ## Letter-by-Letter Animations
 
-Animate text character by character with `.fragment-letters`. Each letter animates in sequence with a staggered delay, all triggered by a single fragment step (one click/keypress).
+Animate text character by character with `.fragment .letters`. Each letter animates in sequence with a staggered delay, all triggered by a single fragment step (one click/keypress).
 
 ### Basic Usage
 
 ```markdown
-[Hello World]{.fragment-letters .bounceIn}
+[Hello World]{.fragment .letters .bounceIn}
 
-[Welcome to RevealJS]{.fragment-letters .fadeIn}
+[Welcome to RevealJS]{.fragment .letters .fadeIn}
 ```
 
 ### On Headers
@@ -175,9 +175,9 @@ Animate text character by character with `.fragment-letters`. Each letter animat
 Letter animations work on headers too:
 
 ```markdown
-# Animated Title {.fragment-letters .bounceIn}
+# Animated Title {.fragment .letters .bounceIn}
 
-## Section Header {.fragment-letters .zoomIn}
+## Section Header {.fragment .letters .zoomIn}
 ```
 
 ### Letter Speed Control
@@ -185,9 +185,9 @@ Letter animations work on headers too:
 Control the stagger delay between letters with letter speed classes:
 
 ```markdown
-[Fast typing]{.fragment-letters .fadeIn .letter-fast}
+[Fast typing]{.fragment .letters .fadeIn .letter-fast}
 
-[Slow reveal]{.fragment-letters .zoomIn .letter-slower}
+[Slow reveal]{.fragment .letters .zoomIn .letter-slower}
 ```
 
 | Class | Delay Between Letters |
@@ -203,9 +203,9 @@ Control the stagger delay between letters with letter speed classes:
 You can combine letter stagger speed with animation duration:
 
 ```markdown
-[Quick bounce]{.fragment-letters .bounceIn .faster .letter-fast}
+[Quick bounce]{.fragment .letters .bounceIn .faster .letter-fast}
 
-[Slow dramatic zoom]{.fragment-letters .zoomIn .slow .letter-slower}
+[Slow dramatic zoom]{.fragment .letters .zoomIn .slow .letter-slower}
 ```
 
 - `letter-*` classes control the delay between each letter starting

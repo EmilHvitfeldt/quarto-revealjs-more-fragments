@@ -238,16 +238,16 @@ Fast space
 
 Magic animations work with letters:
 
-[Puff letters]{.fragment-letters .puffIn}
+[Puff letters]{.fragment .letters .puffIn}
 
-[Space letters]{.fragment-letters .spaceInDown .letter-fast}
+[Space letters]{.fragment .letters .spaceInDown .letter-fast}
 
 ## Letter Syntax
 
 ```markdown
-[Puff letters]{.fragment-letters .puffIn}
+[Puff letters]{.fragment .letters .puffIn}
 
-[Space letters]{.fragment-letters .spaceInDown .letter-fast}
+[Space letters]{.fragment .letters .spaceInDown .letter-fast}
 ```
 
 ## Available Magic Animations

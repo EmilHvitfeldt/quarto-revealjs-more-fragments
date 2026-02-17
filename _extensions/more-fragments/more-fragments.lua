@@ -25,7 +25,7 @@ end
 
 -- Check if a class is fragment-related
 local function is_fragment_class(cls)
-  return cls == 'fragment' or cls == 'whole-slide' or
+  return cls == 'fragment' or cls == 'whole-slide' or cls == 'letters' or
          is_animation_class(cls) or is_speed_class(cls)
 end
 
@@ -54,8 +54,8 @@ local function extract_letter_classes(classes)
   local other_classes = pandoc.List({})
 
   for _, cls in ipairs(classes) do
-    if cls == 'fragment-letters' then
-      -- skip
+    if cls == 'fragment' or cls == 'letters' then
+      -- skip fragment and letters marker classes
     elseif is_animation_class(cls) then
       animation_class = cls
     elseif is_speed_class(cls) then
@@ -126,7 +126,7 @@ end
 
 -- Process a Span element for letter-by-letter animation
 local function process_letter_span(el)
-  if not has_class(el.classes, 'fragment-letters') then
+  if not (has_class(el.classes, 'fragment') and has_class(el.classes, 'letters')) then
     return nil
   end
 
@@ -197,7 +197,7 @@ local function process_doc(doc)
           local wrapper = pandoc.Div(slide_content, pandoc.Attr("", fragment_classes, content_attrs))
           new_blocks:insert(wrapper)
         end
-      elseif has_class(block.classes, 'fragment-letters') then
+      elseif has_class(block.classes, 'fragment') and has_class(block.classes, 'letters') then
         -- Process header text as letter-by-letter animation
         local text = pandoc.utils.stringify(block.content)
 

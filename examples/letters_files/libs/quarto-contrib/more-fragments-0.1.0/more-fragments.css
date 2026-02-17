@@ -770,7 +770,7 @@
   opacity: 0;
 }
 
-/* Magic.css - Perspective Entrances */
+/* Magic.css - Perspective Exits (rotate away from normal) */
 .reveal .slides section span.fragment.perspectiveDown,
 .reveal .slides section span.fragment.perspectiveUp,
 .reveal .slides section span.fragment.perspectiveLeft,
@@ -781,16 +781,17 @@
 .reveal .slides section .fragment.perspectiveUp,
 .reveal .slides section .fragment.perspectiveLeft,
 .reveal .slides section .fragment.perspectiveRight {
-  opacity: 0;
+  opacity: unset;
+  visibility: unset;
 }
 .reveal .slides section .fragment.perspectiveDown.visible,
 .reveal .slides section .fragment.perspectiveUp.visible,
 .reveal .slides section .fragment.perspectiveLeft.visible,
 .reveal .slides section .fragment.perspectiveRight.visible {
-  opacity: 1;
+  opacity: 0;
 }
 
-/* Magic.css - Perspective Returns (Exits) */
+/* Magic.css - Perspective Returns (Entrances - rotate into view) */
 .reveal .slides section span.fragment.perspectiveDownReturn,
 .reveal .slides section span.fragment.perspectiveUpReturn,
 .reveal .slides section span.fragment.perspectiveLeftReturn,
@@ -801,14 +802,13 @@
 .reveal .slides section .fragment.perspectiveUpReturn,
 .reveal .slides section .fragment.perspectiveLeftReturn,
 .reveal .slides section .fragment.perspectiveRightReturn {
-  opacity: unset;
-  visibility: unset;
+  opacity: 0;
 }
 .reveal .slides section .fragment.perspectiveDownReturn.visible,
 .reveal .slides section .fragment.perspectiveUpReturn.visible,
 .reveal .slides section .fragment.perspectiveLeftReturn.visible,
 .reveal .slides section .fragment.perspectiveRightReturn.visible {
-  opacity: 0;
+  opacity: 1;
 }
 
 /* Magic.css - Space Entrances */
@@ -955,13 +955,13 @@
   animation-duration: 1s;
 }
 
-/* Magic.css - Letter-by-letter support */
+/* Magic.css - Letter-by-letter support (entrances start hidden) */
 .reveal .slides section .letter-char.puffIn,
 .reveal .slides section .letter-char.vanishIn,
-.reveal .slides section .letter-char.perspectiveDown,
-.reveal .slides section .letter-char.perspectiveUp,
-.reveal .slides section .letter-char.perspectiveLeft,
-.reveal .slides section .letter-char.perspectiveRight,
+.reveal .slides section .letter-char.perspectiveDownReturn,
+.reveal .slides section .letter-char.perspectiveUpReturn,
+.reveal .slides section .letter-char.perspectiveLeftReturn,
+.reveal .slides section .letter-char.perspectiveRightReturn,
 .reveal .slides section .letter-char.spaceInDown,
 .reveal .slides section .letter-char.spaceInUp,
 .reveal .slides section .letter-char.spaceInLeft,

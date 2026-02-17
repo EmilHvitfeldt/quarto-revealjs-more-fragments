@@ -64,10 +64,10 @@ The header text will animate as a fragment step, while the slide content appears
 
 ### Whole-Slide Animations
 
-To animate an entire slide (header and all content together), use `.fragment-slide`:
+To animate an entire slide (header and all content together), use `.fragment .whole-slide`:
 
 ```markdown
-## Animated Slide {.fragment-slide .fadeIn}
+## Animated Slide {.fragment .whole-slide .fadeIn}
 
 This entire slide animates as one unit.
 All content appears together with the header.
@@ -78,7 +78,7 @@ The slide becomes visible when navigated to, but all content (header + body) sta
 | Class | Effect |
 |-------|--------|
 | `.fragment` | Animates only the header text; content appears immediately |
-| `.fragment-slide` | Animates header and content together as one fragment |
+| `.fragment .whole-slide` | Animates header and content together as one fragment |
 
 ### Letter-by-Letter Animations
 

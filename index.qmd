@@ -122,6 +122,42 @@ This sentence has a [bouncing]{.fragment .bounce} word in it.
 The [quick]{.fragment .pulse} [brown]{.fragment .tada} [fox]{.fragment .wobble} jumps over the lazy dog.
 ```
 
+## Header Animations
+
+You can animate slide headers as fragments:
+
+```markdown
+## My Animated Title {.fragment .bounceIn}
+
+Content that appears after the header animates in.
+```
+
+Speed utilities work on headers too:
+
+```markdown
+## Fast Header {.fragment .zoomIn .faster}
+```
+
+The header text will animate as a fragment step, while the slide content appears normally.
+
+## Whole-Slide Animations
+
+To animate an entire slide (header and all content together), use `.fragment .whole-slide`:
+
+```markdown
+## Animated Slide {.fragment .whole-slide .fadeIn}
+
+This entire slide animates as one unit.
+All content appears together with the header.
+```
+
+The slide becomes visible when navigated to, but all content (header + body) starts hidden and animates in together as one fragment step.
+
+| Class | Effect |
+|-------|--------|
+| `.fragment` | Animates only the header text; content appears immediately |
+| `.fragment .whole-slide` | Animates header and content together as one fragment |
+
 ## Letter-by-Letter Animations
 
 Animate text character by character with `.fragment-letters`. Each letter animates in sequence with a staggered delay, all triggered by a single fragment step (one click/keypress).

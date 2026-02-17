@@ -25,7 +25,7 @@ end
 
 -- Check if a class is fragment-related
 local function is_fragment_class(cls)
-  return cls == 'fragment' or cls == 'fragment-slide' or
+  return cls == 'fragment' or cls == 'whole-slide' or
          is_animation_class(cls) or is_speed_class(cls)
 end
 
@@ -112,8 +112,8 @@ local function extract_fragment_classes(classes)
   local keep_classes = pandoc.List({})
 
   for _, cls in ipairs(classes) do
-    if cls == 'fragment-slide' then
-      fragment_classes:insert('fragment')
+    if cls == 'whole-slide' then
+      -- skip whole-slide marker class, it's handled separately
     elseif is_fragment_class(cls) then
       fragment_classes:insert(cls)
     else
@@ -159,9 +159,9 @@ local function process_doc(doc)
   while i <= #blocks do
     local block = blocks[i]
 
-    -- Check if this is a header with fragment-slide
+    -- Check if this is a header with whole-slide
     if block.t == 'Header' then
-      if has_class(block.classes, 'fragment-slide') then
+      if has_class(block.classes, 'fragment') and has_class(block.classes, 'whole-slide') then
         -- Extract fragment classes
         local fragment_classes, keep_classes = extract_fragment_classes(block.classes)
 

@@ -201,13 +201,13 @@ Speed utilities work on headers:
 `## Fast Header {.fragment .zoomIn .faster}`
 :::
 
-## Whole Slide Animation {.fragment-slide .bounceIn}
+## Whole Slide Animation {.fragment .whole-slide .bounceIn}
 
 This entire slide animates as a single fragment.
 
 Both the header and content animate together.
 
-Use `.fragment-slide` instead of `.fragment`.
+Use `.fragment .whole-slide` instead of just `.fragment`.
 
 ## Animated Plots
 
@@ -259,7 +259,7 @@ plot(mtcars$wt, mtcars$qsec, pch = 19, col = "darkblue",
 :::
 ::::
 
-## Whole Slide with Plot {.fragment-slide .fadeIn}
+## Whole Slide with Plot {.fragment .whole-slide .fadeIn}
 
 ```{r}
 #| echo: false

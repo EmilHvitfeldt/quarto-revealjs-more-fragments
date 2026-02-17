@@ -24,7 +24,7 @@ You can enable this like:
 ---
 title: Simple more-fragments setup
 filters:
-   - _extensions/more-fragments/more-fragments.lua
+   - more-fragments
 ---
 ```
 

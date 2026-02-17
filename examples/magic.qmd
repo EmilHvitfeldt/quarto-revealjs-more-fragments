@@ -1,0 +1,273 @@
+---
+title: "Magic.css Animations"
+subtitle: "Additional effects from Magic.css"
+format: revealjs
+filters:
+  - ../_extensions/more-fragments/more-fragments.lua
+---
+
+## Magic.css Integration
+
+This extension now includes animations from [Magic.css](https://www.minimamente.com/project/magic/).
+
+::: {.fragment .puffIn}
+These add unique effects not found in Animate.css!
+:::
+
+## Bling Effects
+
+Scale and fade with blur:
+
+::: {.fragment .puffIn}
+puffIn - scales down with blur
+:::
+
+::: {.fragment .vanishIn}
+vanishIn - scales with rotation
+:::
+
+## Bling Syntax
+
+```markdown
+::: {.fragment .puffIn}
+Puff in effect
+:::
+
+::: {.fragment .vanishIn}
+Vanish in effect
+:::
+```
+
+## Perspective Animations
+
+3D flip effects (entrances):
+
+::: {.fragment .perspectiveDownReturn}
+perspectiveDownReturn
+:::
+
+::: {.fragment .perspectiveUpReturn}
+perspectiveUpReturn
+:::
+
+::: {.fragment .perspectiveLeftReturn}
+perspectiveLeftReturn
+:::
+
+::: {.fragment .perspectiveRightReturn}
+perspectiveRightReturn
+:::
+
+## Perspective Syntax
+
+```markdown
+::: {.fragment .perspectiveDownReturn}
+Flip from bottom
+:::
+
+::: {.fragment .perspectiveLeftReturn}
+Flip from left
+:::
+```
+
+## Space Animations
+
+Dramatic zoom effects:
+
+::: {.fragment .spaceInDown}
+spaceInDown
+:::
+
+::: {.fragment .spaceInUp}
+spaceInUp
+:::
+
+::: {.fragment .spaceInLeft}
+spaceInLeft
+:::
+
+::: {.fragment .spaceInRight}
+spaceInRight
+:::
+
+## Space Syntax
+
+```markdown
+::: {.fragment .spaceInDown}
+Zoom from above
+:::
+
+::: {.fragment .spaceInRight}
+Zoom from right
+:::
+```
+
+## Boing Animation
+
+Elastic bounce effect:
+
+::: {.fragment .boingInUp}
+boingInUp - elastic bounce from below
+:::
+
+## Boing Syntax
+
+```markdown
+::: {.fragment .boingInUp}
+Elastic bounce entrance
+:::
+```
+
+## Swash Animation
+
+Swirl effect:
+
+::: {.fragment .swashIn}
+swashIn - swirl entrance
+:::
+
+## Swash Syntax
+
+```markdown
+::: {.fragment .swashIn}
+Swirl in effect
+:::
+```
+
+## Tin Animations
+
+Subtle slide with scale:
+
+::: {.fragment .tinDownIn}
+tinDownIn
+:::
+
+::: {.fragment .tinUpIn}
+tinUpIn
+:::
+
+::: {.fragment .tinLeftIn}
+tinLeftIn
+:::
+
+::: {.fragment .tinRightIn}
+tinRightIn
+:::
+
+## Tin Syntax
+
+```markdown
+::: {.fragment .tinDownIn}
+Subtle slide from top
+:::
+
+::: {.fragment .tinLeftIn}
+Subtle slide from left
+:::
+```
+
+## Attention Seekers
+
+Signature Magic.css effects:
+
+::: {.fragment .magic}
+magic - signature spiral
+:::
+
+::: {.fragment .twisterInDown}
+twisterInDown - tornado from top
+:::
+
+::: {.fragment .twisterInUp}
+twisterInUp - tornado from bottom
+:::
+
+## Attention Seeker Syntax
+
+```markdown
+::: {.fragment .magic}
+Signature magic effect
+:::
+
+::: {.fragment .twisterInDown}
+Tornado entrance
+:::
+```
+
+## Inline Usage
+
+Magic animations work inline too:
+
+The [puff]{.fragment .puffIn} and [vanish]{.fragment .vanishIn} effects.
+
+A [perspective]{.fragment .perspectiveDownReturn} flip.
+
+## Inline Syntax
+
+```markdown
+The [puff]{.fragment .puffIn} effect.
+
+A [perspective]{.fragment .perspectiveDownReturn} flip.
+```
+
+## With Speed Utilities
+
+Magic animations support speed classes:
+
+::: {.fragment .puffIn .slower}
+Slow puff (3s)
+:::
+
+::: {.fragment .spaceInDown .faster}
+Fast space (500ms)
+:::
+
+## Speed Syntax
+
+```markdown
+::: {.fragment .puffIn .slower}
+Slow puff
+:::
+
+::: {.fragment .spaceInDown .faster}
+Fast space
+:::
+```
+
+## Letter-by-Letter
+
+Magic animations work with letters:
+
+[Puff letters]{.fragment-letters .puffIn}
+
+[Space letters]{.fragment-letters .spaceInDown .letter-fast}
+
+## Letter Syntax
+
+```markdown
+[Puff letters]{.fragment-letters .puffIn}
+
+[Space letters]{.fragment-letters .spaceInDown .letter-fast}
+```
+
+## Available Magic Animations
+
+| Category | Entrances | Exits |
+|----------|-----------|-------|
+| Bling | `puffIn`, `vanishIn` | `puffOut`, `vanishOut` |
+| Perspective | `perspective*Return` | `perspectiveDown/Up/Left/Right` |
+| Space | `spaceInDown/Up/Left/Right` | `spaceOutDown/Up/Left/Right` |
+| Boing | `boingInUp` | `boingOutDown` |
+| Swash | `swashIn` | `swashOut` |
+| Tin | `tinDownIn/UpIn/LeftIn/RightIn` | `tin*Out` |
+| Attention | `magic`, `twisterInDown/Up` | (same) |
+
+## Learn More
+
+::: {.fragment .puffIn}
+See [Magic.css](https://www.minimamente.com/project/magic/) for the original library.
+:::
+
+::: {.fragment .spaceInUp}
+All Magic animations are fully reversible!
+:::

@@ -10,7 +10,10 @@
       "Bash(curl:*)",
       "Bash(gh api:*)",
       "Bash(quarto render:*)",
-      "Bash(pandoc:*)"
+      "Bash(pandoc:*)",
+      "WebFetch(domain:www.minimamente.com)",
+      "Bash(tr:*)",
+      "WebFetch(domain:cdn.jsdelivr.net)"
     ]
   }
 }

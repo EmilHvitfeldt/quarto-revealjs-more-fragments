@@ -151,7 +151,60 @@
     jackInTheBox: 'zoomOut',
     rollIn: 'rollOut',
     rollOut: 'rollIn',
-    hinge: 'fadeIn'
+    hinge: 'fadeIn',
+
+    // ==========================================================================
+    // Magic.css Animations
+    // ==========================================================================
+
+    // Magic.css - Bling
+    puffIn: 'puffOut',
+    puffOut: 'puffIn',
+    vanishIn: 'vanishOut',
+    vanishOut: 'vanishIn',
+
+    // Magic.css - Perspective
+    perspectiveDown: 'perspectiveDownReturn',
+    perspectiveUp: 'perspectiveUpReturn',
+    perspectiveLeft: 'perspectiveLeftReturn',
+    perspectiveRight: 'perspectiveRightReturn',
+    perspectiveDownReturn: 'perspectiveDown',
+    perspectiveUpReturn: 'perspectiveUp',
+    perspectiveLeftReturn: 'perspectiveLeft',
+    perspectiveRightReturn: 'perspectiveRight',
+
+    // Magic.css - Space
+    spaceInDown: 'spaceOutDown',
+    spaceInUp: 'spaceOutUp',
+    spaceInLeft: 'spaceOutLeft',
+    spaceInRight: 'spaceOutRight',
+    spaceOutDown: 'spaceInDown',
+    spaceOutUp: 'spaceInUp',
+    spaceOutLeft: 'spaceInLeft',
+    spaceOutRight: 'spaceInRight',
+
+    // Magic.css - Boing
+    boingInUp: 'boingOutDown',
+    boingOutDown: 'boingInUp',
+
+    // Magic.css - Swash
+    swashIn: 'swashOut',
+    swashOut: 'swashIn',
+
+    // Magic.css - Tin
+    tinDownIn: 'tinDownOut',
+    tinUpIn: 'tinUpOut',
+    tinLeftIn: 'tinLeftOut',
+    tinRightIn: 'tinRightOut',
+    tinDownOut: 'tinDownIn',
+    tinUpOut: 'tinUpIn',
+    tinLeftOut: 'tinLeftIn',
+    tinRightOut: 'tinRightIn',
+
+    // Magic.css - Attention seekers (replay same animation)
+    magic: 'magic',
+    twisterInDown: 'twisterInDown',
+    twisterInUp: 'twisterInUp'
   };
 
   // Get all animation class names

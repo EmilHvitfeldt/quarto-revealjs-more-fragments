@@ -735,3 +735,242 @@
 /* Letter speed utility classes - these affect the stagger delay via JS */
 /* The classes are: letter-faster, letter-fast, letter-slow, letter-slower */
 /* Delays: 20ms, 35ms, 80ms, 120ms (default is 50ms) */
+
+/* ==========================================================================
+   Magic.css Animations
+   From: https://www.minimamente.com/project/magic/ (MIT License)
+   ========================================================================== */
+
+/* Magic.css - Bling Entrances */
+.reveal .slides section span.fragment.puffIn,
+.reveal .slides section span.fragment.vanishIn {
+  display: inline-block;
+}
+.reveal .slides section .fragment.puffIn,
+.reveal .slides section .fragment.vanishIn {
+  opacity: 0;
+}
+.reveal .slides section .fragment.puffIn.visible,
+.reveal .slides section .fragment.vanishIn.visible {
+  opacity: 1;
+}
+
+/* Magic.css - Bling Exits */
+.reveal .slides section span.fragment.puffOut,
+.reveal .slides section span.fragment.vanishOut {
+  display: inline-block;
+}
+.reveal .slides section .fragment.puffOut,
+.reveal .slides section .fragment.vanishOut {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.puffOut.visible,
+.reveal .slides section .fragment.vanishOut.visible {
+  opacity: 0;
+}
+
+/* Magic.css - Perspective Entrances */
+.reveal .slides section span.fragment.perspectiveDown,
+.reveal .slides section span.fragment.perspectiveUp,
+.reveal .slides section span.fragment.perspectiveLeft,
+.reveal .slides section span.fragment.perspectiveRight {
+  display: inline-block;
+}
+.reveal .slides section .fragment.perspectiveDown,
+.reveal .slides section .fragment.perspectiveUp,
+.reveal .slides section .fragment.perspectiveLeft,
+.reveal .slides section .fragment.perspectiveRight {
+  opacity: 0;
+}
+.reveal .slides section .fragment.perspectiveDown.visible,
+.reveal .slides section .fragment.perspectiveUp.visible,
+.reveal .slides section .fragment.perspectiveLeft.visible,
+.reveal .slides section .fragment.perspectiveRight.visible {
+  opacity: 1;
+}
+
+/* Magic.css - Perspective Returns (Exits) */
+.reveal .slides section span.fragment.perspectiveDownReturn,
+.reveal .slides section span.fragment.perspectiveUpReturn,
+.reveal .slides section span.fragment.perspectiveLeftReturn,
+.reveal .slides section span.fragment.perspectiveRightReturn {
+  display: inline-block;
+}
+.reveal .slides section .fragment.perspectiveDownReturn,
+.reveal .slides section .fragment.perspectiveUpReturn,
+.reveal .slides section .fragment.perspectiveLeftReturn,
+.reveal .slides section .fragment.perspectiveRightReturn {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.perspectiveDownReturn.visible,
+.reveal .slides section .fragment.perspectiveUpReturn.visible,
+.reveal .slides section .fragment.perspectiveLeftReturn.visible,
+.reveal .slides section .fragment.perspectiveRightReturn.visible {
+  opacity: 0;
+}
+
+/* Magic.css - Space Entrances */
+.reveal .slides section span.fragment.spaceInDown,
+.reveal .slides section span.fragment.spaceInUp,
+.reveal .slides section span.fragment.spaceInLeft,
+.reveal .slides section span.fragment.spaceInRight {
+  display: inline-block;
+}
+.reveal .slides section .fragment.spaceInDown,
+.reveal .slides section .fragment.spaceInUp,
+.reveal .slides section .fragment.spaceInLeft,
+.reveal .slides section .fragment.spaceInRight {
+  opacity: 0;
+}
+.reveal .slides section .fragment.spaceInDown.visible,
+.reveal .slides section .fragment.spaceInUp.visible,
+.reveal .slides section .fragment.spaceInLeft.visible,
+.reveal .slides section .fragment.spaceInRight.visible {
+  opacity: 1;
+}
+
+/* Magic.css - Space Exits */
+.reveal .slides section span.fragment.spaceOutDown,
+.reveal .slides section span.fragment.spaceOutUp,
+.reveal .slides section span.fragment.spaceOutLeft,
+.reveal .slides section span.fragment.spaceOutRight {
+  display: inline-block;
+}
+.reveal .slides section .fragment.spaceOutDown,
+.reveal .slides section .fragment.spaceOutUp,
+.reveal .slides section .fragment.spaceOutLeft,
+.reveal .slides section .fragment.spaceOutRight {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.spaceOutDown.visible,
+.reveal .slides section .fragment.spaceOutUp.visible,
+.reveal .slides section .fragment.spaceOutLeft.visible,
+.reveal .slides section .fragment.spaceOutRight.visible {
+  opacity: 0;
+}
+
+/* Magic.css - Boing */
+.reveal .slides section span.fragment.boingInUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.boingInUp {
+  opacity: 0;
+}
+.reveal .slides section .fragment.boingInUp.visible {
+  opacity: 1;
+}
+
+.reveal .slides section span.fragment.boingOutDown {
+  display: inline-block;
+}
+.reveal .slides section .fragment.boingOutDown {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.boingOutDown.visible {
+  opacity: 0;
+}
+
+/* Magic.css - Swash */
+.reveal .slides section span.fragment.swashIn {
+  display: inline-block;
+}
+.reveal .slides section .fragment.swashIn {
+  opacity: 0;
+}
+.reveal .slides section .fragment.swashIn.visible {
+  opacity: 1;
+}
+
+.reveal .slides section span.fragment.swashOut {
+  display: inline-block;
+}
+.reveal .slides section .fragment.swashOut {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.swashOut.visible {
+  opacity: 0;
+}
+
+/* Magic.css - Tin Entrances */
+.reveal .slides section span.fragment.tinDownIn,
+.reveal .slides section span.fragment.tinUpIn,
+.reveal .slides section span.fragment.tinLeftIn,
+.reveal .slides section span.fragment.tinRightIn {
+  display: inline-block;
+}
+.reveal .slides section .fragment.tinDownIn,
+.reveal .slides section .fragment.tinUpIn,
+.reveal .slides section .fragment.tinLeftIn,
+.reveal .slides section .fragment.tinRightIn {
+  opacity: 0;
+}
+.reveal .slides section .fragment.tinDownIn.visible,
+.reveal .slides section .fragment.tinUpIn.visible,
+.reveal .slides section .fragment.tinLeftIn.visible,
+.reveal .slides section .fragment.tinRightIn.visible {
+  opacity: 1;
+}
+
+/* Magic.css - Tin Exits */
+.reveal .slides section span.fragment.tinDownOut,
+.reveal .slides section span.fragment.tinUpOut,
+.reveal .slides section span.fragment.tinLeftOut,
+.reveal .slides section span.fragment.tinRightOut {
+  display: inline-block;
+}
+.reveal .slides section .fragment.tinDownOut,
+.reveal .slides section .fragment.tinUpOut,
+.reveal .slides section .fragment.tinLeftOut,
+.reveal .slides section .fragment.tinRightOut {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section .fragment.tinDownOut.visible,
+.reveal .slides section .fragment.tinUpOut.visible,
+.reveal .slides section .fragment.tinLeftOut.visible,
+.reveal .slides section .fragment.tinRightOut.visible {
+  opacity: 0;
+}
+
+/* Magic.css - Attention Seekers */
+.reveal .slides section .fragment.magic,
+.reveal .slides section .fragment.twisterInDown,
+.reveal .slides section .fragment.twisterInUp {
+  opacity: unset;
+  visibility: unset;
+}
+.reveal .slides section span.fragment.magic,
+.reveal .slides section span.fragment.twisterInDown,
+.reveal .slides section span.fragment.twisterInUp {
+  display: inline-block;
+}
+.reveal .slides section .fragment.magic.current-fragment,
+.reveal .slides section .fragment.twisterInDown.current-fragment,
+.reveal .slides section .fragment.twisterInUp.current-fragment {
+  animation-duration: 1s;
+}
+
+/* Magic.css - Letter-by-letter support */
+.reveal .slides section .letter-char.puffIn,
+.reveal .slides section .letter-char.vanishIn,
+.reveal .slides section .letter-char.perspectiveDown,
+.reveal .slides section .letter-char.perspectiveUp,
+.reveal .slides section .letter-char.perspectiveLeft,
+.reveal .slides section .letter-char.perspectiveRight,
+.reveal .slides section .letter-char.spaceInDown,
+.reveal .slides section .letter-char.spaceInUp,
+.reveal .slides section .letter-char.spaceInLeft,
+.reveal .slides section .letter-char.spaceInRight,
+.reveal .slides section .letter-char.boingInUp,
+.reveal .slides section .letter-char.swashIn,
+.reveal .slides section .letter-char.tinDownIn,
+.reveal .slides section .letter-char.tinUpIn,
+.reveal .slides section .letter-char.tinLeftIn,
+.reveal .slides section .letter-char.tinRightIn {
+  opacity: 0;
+}

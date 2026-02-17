@@ -1,6 +1,6 @@
 # more-fragments
 
-An extension that uses the [Animate.css](https://animate.style/) library to add additional fragment animations to RevealJS presentations.
+An extension that uses [Animate.css](https://animate.style/) and [Magic.css](https://www.minimamente.com/project/magic/) libraries to add additional fragment animations to RevealJS presentations.
 
 ## Installation
 
@@ -133,6 +133,21 @@ For full documentation and examples, visit the [documentation site](https://emil
 ### Specials
 
 `flip`, `hinge`, `jackInTheBox`, `rollIn`, `rollOut`
+
+### Magic.css Animations
+
+Additional animations from [Magic.css](https://www.minimamente.com/project/magic/):
+
+| Category | Entrances | Exits |
+|----------|-----------|-------|
+| Bling | `puffIn`, `vanishIn` | `puffOut`, `vanishOut` |
+| Perspective | `perspectiveDownReturn`, `perspectiveUpReturn`, `perspectiveLeftReturn`, `perspectiveRightReturn` | `perspectiveDown`, `perspectiveUp`, `perspectiveLeft`, `perspectiveRight` |
+| Space | `spaceInDown`, `spaceInUp`, `spaceInLeft`, `spaceInRight` | `spaceOutDown`, `spaceOutUp`, `spaceOutLeft`, `spaceOutRight` |
+| Boing | `boingInUp` | `boingOutDown` |
+| Swash | `swashIn` | `swashOut` |
+| Tin | `tinDownIn`, `tinUpIn`, `tinLeftIn`, `tinRightIn` | `tinDownOut`, `tinUpOut`, `tinLeftOut`, `tinRightOut` |
+
+Magic.css attention seekers: `magic`, `twisterInDown`, `twisterInUp`
 
 ## Speed Utilities
 

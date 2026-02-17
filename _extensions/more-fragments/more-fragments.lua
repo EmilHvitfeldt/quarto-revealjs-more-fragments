@@ -4,13 +4,18 @@
 
 -- Helper function to check if a class is an animation class
 local function is_animation_class(cls)
+  -- Animate.css patterns
   return cls:match('^bounce') or cls:match('^fade') or cls:match('^flip') or
          cls:match('^slide') or cls:match('^zoom') or cls:match('^rotate') or
          cls:match('^back') or cls:match('^light') or cls:match('^jack') or
          cls:match('^roll') or cls:match('^hinge') or cls:match('^pulse') or
          cls:match('^rubber') or cls:match('^shake') or cls:match('^head') or
          cls:match('^swing') or cls:match('^tada') or cls:match('^wobble') or
-         cls:match('^jello') or cls:match('^heart') or cls:match('^flash')
+         cls:match('^jello') or cls:match('^heart') or cls:match('^flash') or
+         -- Magic.css patterns
+         cls:match('^puff') or cls:match('^vanish') or cls:match('^perspective') or
+         cls:match('^space') or cls:match('^boing') or cls:match('^swash') or
+         cls:match('^tin') or cls:match('^twister') or cls == 'magic'
 end
 
 -- Helper function to check if a class is a speed class
@@ -232,7 +237,7 @@ local function process_doc(doc)
     quarto.doc.add_html_dependency({
       name = "more-fragments",
       version = "0.1.0",
-      stylesheets = {"animate.min.css", "more-fragments.css"},
+      stylesheets = {"animate.min.css", "magic.min.css", "more-fragments.css"},
       scripts = {"more-fragments.js"}
     })
   end

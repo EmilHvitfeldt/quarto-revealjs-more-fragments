@@ -1,6 +1,8 @@
-# more-fragments
+# quarto revealjs more-fragments
 
-An extension that uses [Animate.css](https://animate.style/) and [Magic.css](https://www.minimamente.com/project/magic/) libraries to add additional fragment animations to RevealJS presentations.
+An [Quarto](https://quarto.org/) revealjs extension that uses [Animate.css](https://animate.style/) and [Magic.css](https://www.minimamente.com/project/magic/) libraries to add additional fragment animations to RevealJS presentations.
+
+**[View Documentation & Live Examples](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/)**
 
 ## Installation
 

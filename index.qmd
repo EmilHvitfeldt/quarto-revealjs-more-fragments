@@ -74,128 +74,43 @@ Character-by-character reveal effects for text and headers.
 
 ## Available Animations
 
-### Attention Seekers
+### Animate.css
 
-These animations keep the element visible and animate when triggered:
+**Attention Seekers:** `bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`
 
-| Animation | Animation | Animation | Animation |
-|-----------|-----------|-----------|-----------|
-| `bounce` | `flash` | `pulse` | `rubberBand` |
-| `shakeX` | `shakeY` | `headShake` | `swing` |
-| `tada` | `wobble` | `jello` | `heartBeat` |
+**Back:** `backInDown`, `backInLeft`, `backInRight`, `backInUp`
 
-### Back Animations
+**Bounce:** `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`
 
-| Entrances | Exits |
-|-----------|-------|
-| `backInDown` | `backOutDown` |
-| `backInLeft` | `backOutLeft` |
-| `backInRight` | `backOutRight` |
-| `backInUp` | `backOutUp` |
+**Fade:** `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`
 
-### Bouncing Animations
+**Flip:** `flip`, `flipInX`, `flipInY`
 
-| Entrances | Exits |
-|-----------|-------|
-| `bounceIn` | `bounceOut` |
-| `bounceInDown` | `bounceOutDown` |
-| `bounceInLeft` | `bounceOutLeft` |
-| `bounceInRight` | `bounceOutRight` |
-| `bounceInUp` | `bounceOutUp` |
+**Lightspeed:** `lightSpeedInLeft`, `lightSpeedInRight`
 
-### Fading Animations
+**Rotate:** `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`
 
-| Entrances | Exits |
-|-----------|-------|
-| `fadeIn` | `fadeOut` |
-| `fadeInDown` | `fadeOutDown` |
-| `fadeInDownBig` | `fadeOutDownBig` |
-| `fadeInLeft` | `fadeOutLeft` |
-| `fadeInLeftBig` | `fadeOutLeftBig` |
-| `fadeInRight` | `fadeOutRight` |
-| `fadeInRightBig` | `fadeOutRightBig` |
-| `fadeInUp` | `fadeOutUp` |
-| `fadeInUpBig` | `fadeOutUpBig` |
-| `fadeInTopLeft` | `fadeOutTopLeft` |
-| `fadeInTopRight` | `fadeOutTopRight` |
-| `fadeInBottomLeft` | `fadeOutBottomLeft` |
-| `fadeInBottomRight` | `fadeOutBottomRight` |
+**Slide:** `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`
 
-### Flippers
+**Zoom:** `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`
 
-| Animation |
-|-----------|
-| `flip` |
-| `flipInX` |
-| `flipInY` |
-| `flipOutX` |
-| `flipOutY` |
+**Specials:** `hinge`, `jackInTheBox`, `rollIn`
 
-### Lightspeed
+### Magic.css
 
-| Entrances | Exits |
-|-----------|-------|
-| `lightSpeedInLeft` | `lightSpeedOutLeft` |
-| `lightSpeedInRight` | `lightSpeedOutRight` |
+**Attention Seekers:** `magic`, `twisterInDown`, `twisterInUp`
 
-### Rotating Animations
+**Bling:** `puffIn`, `vanishIn`
 
-| Entrances | Exits |
-|-----------|-------|
-| `rotateIn` | `rotateOut` |
-| `rotateInDownLeft` | `rotateOutDownLeft` |
-| `rotateInDownRight` | `rotateOutDownRight` |
-| `rotateInUpLeft` | `rotateOutUpLeft` |
-| `rotateInUpRight` | `rotateOutUpRight` |
+**Perspective:** `perspectiveDownReturn`, `perspectiveUpReturn`, `perspectiveLeftReturn`, `perspectiveRightReturn`
 
-### Sliding Animations
+**Space:** `spaceInDown`, `spaceInUp`, `spaceInLeft`, `spaceInRight`
 
-| Entrances | Exits |
-|-----------|-------|
-| `slideInDown` | `slideOutDown` |
-| `slideInLeft` | `slideOutLeft` |
-| `slideInRight` | `slideOutRight` |
-| `slideInUp` | `slideOutUp` |
+**Boing:** `boingInUp`
 
-### Zooming Animations
+**Swash:** `swashIn`
 
-| Entrances | Exits |
-|-----------|-------|
-| `zoomIn` | `zoomOut` |
-| `zoomInDown` | `zoomOutDown` |
-| `zoomInLeft` | `zoomOutLeft` |
-| `zoomInRight` | `zoomOutRight` |
-| `zoomInUp` | `zoomOutUp` |
-
-### Specials
-
-| Animation |
-|-----------|
-| `hinge` |
-| `jackInTheBox` |
-| `rollIn` |
-| `rollOut` |
-
-### Magic.css Animations
-
-Additional animations from [Magic.css](https://www.minimamente.com/project/magic/):
-
-| Category | Entrances | Exits |
-|----------|-----------|-------|
-| Bling | `puffIn`, `vanishIn` | `puffOut`, `vanishOut` |
-| Perspective | `perspectiveDownReturn`, `perspectiveUpReturn`, `perspectiveLeftReturn`, `perspectiveRightReturn` | `perspectiveDown`, `perspectiveUp`, `perspectiveLeft`, `perspectiveRight` |
-| Space | `spaceInDown`, `spaceInUp`, `spaceInLeft`, `spaceInRight` | `spaceOutDown`, `spaceOutUp`, `spaceOutLeft`, `spaceOutRight` |
-| Boing | `boingInUp` | `boingOutDown` |
-| Swash | `swashIn` | `swashOut` |
-| Tin | `tinDownIn`, `tinUpIn`, `tinLeftIn`, `tinRightIn` | `tinDownOut`, `tinUpOut`, `tinLeftOut`, `tinRightOut` |
-
-Magic.css attention seekers (animate in place):
-
-| Animation |
-|-----------|
-| `magic` |
-| `twisterInDown` |
-| `twisterInUp` |
+**Tin:** `tinDownIn`, `tinUpIn`, `tinLeftIn`, `tinRightIn`
 
 ## Inline Usage
 

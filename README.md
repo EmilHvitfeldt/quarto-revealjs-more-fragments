@@ -1,4 +1,4 @@
-# quarto revealjs more-fragments
+# quarto revealjs more fragments
 
 An [Quarto](https://quarto.org/) revealjs extension that uses [Animate.css](https://animate.style/) and [Magic.css](https://www.minimamente.com/project/magic/) libraries to add additional fragment animations to RevealJS presentations.
 
@@ -115,41 +115,43 @@ For full documentation and examples, visit the [documentation site](https://emil
 
 ## Available Animations
 
-### Attention Seekers
+### Animate.css
 
-`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`
+**Attention Seekers:** `bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`
 
-### Entrance/Exit Animations
+**Back:** `backInDown`, `backInLeft`, `backInRight`, `backInUp`
 
-| Category | Entrances | Exits |
-|----------|-----------|-------|
-| Back | `backInDown`, `backInLeft`, `backInRight`, `backInUp` | `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp` |
-| Bounce | `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp` | `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp` |
-| Fade | `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight` | `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomLeft`, `fadeOutBottomRight` |
-| Flip | `flipInX`, `flipInY` | `flipOutX`, `flipOutY` |
-| Lightspeed | `lightSpeedInLeft`, `lightSpeedInRight` | `lightSpeedOutLeft`, `lightSpeedOutRight` |
-| Rotate | `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight` | `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight` |
-| Slide | `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp` | `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` |
-| Zoom | `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp` | `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp` |
+**Bounce:** `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`
 
-### Specials
+**Fade:** `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`
 
-`flip`, `hinge`, `jackInTheBox`, `rollIn`, `rollOut`
+**Flip:** `flip`, `flipInX`, `flipInY`
 
-### Magic.css Animations
+**Lightspeed:** `lightSpeedInLeft`, `lightSpeedInRight`
 
-Additional animations from [Magic.css](https://www.minimamente.com/project/magic/):
+**Rotate:** `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`
 
-| Category | Entrances | Exits |
-|----------|-----------|-------|
-| Bling | `puffIn`, `vanishIn` | `puffOut`, `vanishOut` |
-| Perspective | `perspectiveDownReturn`, `perspectiveUpReturn`, `perspectiveLeftReturn`, `perspectiveRightReturn` | `perspectiveDown`, `perspectiveUp`, `perspectiveLeft`, `perspectiveRight` |
-| Space | `spaceInDown`, `spaceInUp`, `spaceInLeft`, `spaceInRight` | `spaceOutDown`, `spaceOutUp`, `spaceOutLeft`, `spaceOutRight` |
-| Boing | `boingInUp` | `boingOutDown` |
-| Swash | `swashIn` | `swashOut` |
-| Tin | `tinDownIn`, `tinUpIn`, `tinLeftIn`, `tinRightIn` | `tinDownOut`, `tinUpOut`, `tinLeftOut`, `tinRightOut` |
+**Slide:** `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`
 
-Magic.css attention seekers: `magic`, `twisterInDown`, `twisterInUp`
+**Zoom:** `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`
+
+**Specials:** `hinge`, `jackInTheBox`, `rollIn`
+
+### Magic.css
+
+**Attention Seekers:** `magic`, `twisterInDown`, `twisterInUp`
+
+**Bling:** `puffIn`, `vanishIn`
+
+**Perspective:** `perspectiveDownReturn`, `perspectiveUpReturn`, `perspectiveLeftReturn`, `perspectiveRightReturn`
+
+**Space:** `spaceInDown`, `spaceInUp`, `spaceInLeft`, `spaceInRight`
+
+**Boing:** `boingInUp`
+
+**Swash:** `swashIn`
+
+**Tin:** `tinDownIn`, `tinUpIn`, `tinLeftIn`, `tinRightIn`
 
 ## Speed Utilities
 

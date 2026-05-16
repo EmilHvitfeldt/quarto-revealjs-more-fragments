@@ -1,0 +1,324 @@
+$schema: https://m.canouil.dev/quarto-wizard/assets/schema/v1/extension-schema.json
+
+classes:
+  # Extension-specific classes
+  whole-slide:
+    description: "Apply fragment animation to an entire slide, animating header and content together."
+  letters:
+    description: "Animate text letter-by-letter as a fragment."
+
+  # Speed modifiers
+  slower:
+    description: "Animation speed: slowest (3s)."
+  slow:
+    description: "Animation speed: slow (2s)."
+  fast:
+    description: "Animation speed: fast (800ms)."
+  faster:
+    description: "Animation speed: fastest (500ms)."
+
+  # Letter speed modifiers
+  letter-slower:
+    description: "Letter-by-letter delay: slowest (120ms)."
+  letter-slow:
+    description: "Letter-by-letter delay: slow (80ms)."
+  letter-fast:
+    description: "Letter-by-letter delay: fast (35ms)."
+  letter-faster:
+    description: "Letter-by-letter delay: fastest (20ms)."
+
+  # Animate.css - Attention seekers
+  bounce:
+    description: "Attention seeker: bounce animation."
+  flash:
+    description: "Attention seeker: flash animation."
+  pulse:
+    description: "Attention seeker: pulse animation."
+  rubberBand:
+    description: "Attention seeker: rubber band animation."
+  shakeX:
+    description: "Attention seeker: horizontal shake animation."
+  shakeY:
+    description: "Attention seeker: vertical shake animation."
+  headShake:
+    description: "Attention seeker: head shake animation."
+  swing:
+    description: "Attention seeker: swing animation."
+  tada:
+    description: "Attention seeker: tada animation."
+  wobble:
+    description: "Attention seeker: wobble animation."
+  jello:
+    description: "Attention seeker: jello animation."
+  heartBeat:
+    description: "Attention seeker: heartbeat animation."
+
+  # Animate.css - Back entrances/exits
+  backInDown:
+    description: "Entrance: back in from top."
+  backInLeft:
+    description: "Entrance: back in from left."
+  backInRight:
+    description: "Entrance: back in from right."
+  backInUp:
+    description: "Entrance: back in from bottom."
+  backOutDown:
+    description: "Exit: back out downward."
+  backOutLeft:
+    description: "Exit: back out to left."
+  backOutRight:
+    description: "Exit: back out to right."
+  backOutUp:
+    description: "Exit: back out upward."
+
+  # Animate.css - Bouncing entrances/exits
+  bounceIn:
+    description: "Entrance: bounce in."
+  bounceInDown:
+    description: "Entrance: bounce in from top."
+  bounceInLeft:
+    description: "Entrance: bounce in from left."
+  bounceInRight:
+    description: "Entrance: bounce in from right."
+  bounceInUp:
+    description: "Entrance: bounce in from bottom."
+  bounceOut:
+    description: "Exit: bounce out."
+  bounceOutDown:
+    description: "Exit: bounce out downward."
+  bounceOutLeft:
+    description: "Exit: bounce out to left."
+  bounceOutRight:
+    description: "Exit: bounce out to right."
+  bounceOutUp:
+    description: "Exit: bounce out upward."
+
+  # Animate.css - Fading entrances/exits
+  fadeIn:
+    description: "Entrance: fade in."
+  fadeInDown:
+    description: "Entrance: fade in from top."
+  fadeInDownBig:
+    description: "Entrance: fade in from top (large distance)."
+  fadeInLeft:
+    description: "Entrance: fade in from left."
+  fadeInLeftBig:
+    description: "Entrance: fade in from left (large distance)."
+  fadeInRight:
+    description: "Entrance: fade in from right."
+  fadeInRightBig:
+    description: "Entrance: fade in from right (large distance)."
+  fadeInUp:
+    description: "Entrance: fade in from bottom."
+  fadeInUpBig:
+    description: "Entrance: fade in from bottom (large distance)."
+  fadeInTopLeft:
+    description: "Entrance: fade in from top-left."
+  fadeInTopRight:
+    description: "Entrance: fade in from top-right."
+  fadeInBottomLeft:
+    description: "Entrance: fade in from bottom-left."
+  fadeInBottomRight:
+    description: "Entrance: fade in from bottom-right."
+  fadeOut:
+    description: "Exit: fade out."
+  fadeOutDown:
+    description: "Exit: fade out downward."
+  fadeOutDownBig:
+    description: "Exit: fade out downward (large distance)."
+  fadeOutLeft:
+    description: "Exit: fade out to left."
+  fadeOutLeftBig:
+    description: "Exit: fade out to left (large distance)."
+  fadeOutRight:
+    description: "Exit: fade out to right."
+  fadeOutRightBig:
+    description: "Exit: fade out to right (large distance)."
+  fadeOutUp:
+    description: "Exit: fade out upward."
+  fadeOutUpBig:
+    description: "Exit: fade out upward (large distance)."
+  fadeOutTopLeft:
+    description: "Exit: fade out to top-left."
+  fadeOutTopRight:
+    description: "Exit: fade out to top-right."
+  fadeOutBottomLeft:
+    description: "Exit: fade out to bottom-left."
+  fadeOutBottomRight:
+    description: "Exit: fade out to bottom-right."
+
+  # Animate.css - Flippers
+  flipInX:
+    description: "Entrance: flip in horizontally."
+  flipInY:
+    description: "Entrance: flip in vertically."
+  flipOutX:
+    description: "Exit: flip out horizontally."
+  flipOutY:
+    description: "Exit: flip out vertically."
+
+  # Animate.css - Lightspeed
+  lightSpeedInRight:
+    description: "Entrance: light speed in from right."
+  lightSpeedInLeft:
+    description: "Entrance: light speed in from left."
+  lightSpeedOutRight:
+    description: "Exit: light speed out to right."
+  lightSpeedOutLeft:
+    description: "Exit: light speed out to left."
+
+  # Animate.css - Rotating entrances/exits
+  rotateIn:
+    description: "Entrance: rotate in."
+  rotateInDownLeft:
+    description: "Entrance: rotate in from bottom-left."
+  rotateInDownRight:
+    description: "Entrance: rotate in from bottom-right."
+  rotateInUpLeft:
+    description: "Entrance: rotate in from top-left."
+  rotateInUpRight:
+    description: "Entrance: rotate in from top-right."
+  rotateOut:
+    description: "Exit: rotate out."
+  rotateOutDownLeft:
+    description: "Exit: rotate out to bottom-left."
+  rotateOutDownRight:
+    description: "Exit: rotate out to bottom-right."
+  rotateOutUpLeft:
+    description: "Exit: rotate out to top-left."
+  rotateOutUpRight:
+    description: "Exit: rotate out to top-right."
+
+  # Animate.css - Sliding entrances/exits
+  slideInDown:
+    description: "Entrance: slide in from top."
+  slideInLeft:
+    description: "Entrance: slide in from left."
+  slideInRight:
+    description: "Entrance: slide in from right."
+  slideInUp:
+    description: "Entrance: slide in from bottom."
+  slideOutDown:
+    description: "Exit: slide out downward."
+  slideOutLeft:
+    description: "Exit: slide out to left."
+  slideOutRight:
+    description: "Exit: slide out to right."
+  slideOutUp:
+    description: "Exit: slide out upward."
+
+  # Animate.css - Zooming entrances/exits
+  zoomIn:
+    description: "Entrance: zoom in."
+  zoomInDown:
+    description: "Entrance: zoom in from top."
+  zoomInLeft:
+    description: "Entrance: zoom in from left."
+  zoomInRight:
+    description: "Entrance: zoom in from right."
+  zoomInUp:
+    description: "Entrance: zoom in from bottom."
+  zoomOut:
+    description: "Exit: zoom out."
+  zoomOutDown:
+    description: "Exit: zoom out downward."
+  zoomOutLeft:
+    description: "Exit: zoom out to left."
+  zoomOutRight:
+    description: "Exit: zoom out to right."
+  zoomOutUp:
+    description: "Exit: zoom out upward."
+
+  # Animate.css - Specials
+  jackInTheBox:
+    description: "Entrance: jack in the box animation."
+  rollIn:
+    description: "Entrance: roll in."
+  rollOut:
+    description: "Exit: roll out."
+  hinge:
+    description: "Exit: hinge and fall."
+
+  # Magic.css - Bling
+  puffIn:
+    description: "Entrance: puff in (scale up with opacity)."
+  puffOut:
+    description: "Exit: puff out (scale up and fade)."
+  vanishIn:
+    description: "Entrance: vanish in."
+  vanishOut:
+    description: "Exit: vanish out."
+
+  # Magic.css - Perspective
+  perspectiveDown:
+    description: "Entrance: perspective tilt from top."
+  perspectiveUp:
+    description: "Entrance: perspective tilt from bottom."
+  perspectiveLeft:
+    description: "Entrance: perspective tilt from left."
+  perspectiveRight:
+    description: "Entrance: perspective tilt from right."
+  perspectiveDownReturn:
+    description: "Exit: return from perspective tilt (top)."
+  perspectiveUpReturn:
+    description: "Exit: return from perspective tilt (bottom)."
+  perspectiveLeftReturn:
+    description: "Exit: return from perspective tilt (left)."
+  perspectiveRightReturn:
+    description: "Exit: return from perspective tilt (right)."
+
+  # Magic.css - Space
+  spaceInDown:
+    description: "Entrance: space in from top."
+  spaceInUp:
+    description: "Entrance: space in from bottom."
+  spaceInLeft:
+    description: "Entrance: space in from left."
+  spaceInRight:
+    description: "Entrance: space in from right."
+  spaceOutDown:
+    description: "Exit: space out downward."
+  spaceOutUp:
+    description: "Exit: space out upward."
+  spaceOutLeft:
+    description: "Exit: space out to left."
+  spaceOutRight:
+    description: "Exit: space out to right."
+
+  # Magic.css - Boing
+  boingInUp:
+    description: "Entrance: boing in from bottom."
+  boingOutDown:
+    description: "Exit: boing out downward."
+
+  # Magic.css - Swash
+  swashIn:
+    description: "Entrance: swash in."
+  swashOut:
+    description: "Exit: swash out."
+
+  # Magic.css - Tin
+  tinDownIn:
+    description: "Entrance: tin in from top."
+  tinUpIn:
+    description: "Entrance: tin in from bottom."
+  tinLeftIn:
+    description: "Entrance: tin in from left."
+  tinRightIn:
+    description: "Entrance: tin in from right."
+  tinDownOut:
+    description: "Exit: tin out downward."
+  tinUpOut:
+    description: "Exit: tin out upward."
+  tinLeftOut:
+    description: "Exit: tin out to left."
+  tinRightOut:
+    description: "Exit: tin out to right."
+
+  # Magic.css - Specials
+  magic:
+    description: "Attention seeker: magic animation."
+  twisterInDown:
+    description: "Entrance: twister in from top."
+  twisterInUp:
+    description: "Entrance: twister in from bottom."

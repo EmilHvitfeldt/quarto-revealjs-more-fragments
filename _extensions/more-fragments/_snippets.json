@@ -1,0 +1,39 @@
+{
+  "Block Fragment": {
+    "prefix": "block",
+    "body": [
+      "::: {.fragment .${1|fadeIn,fadeOut,fadeUp,fadeDown,fadeLeft,fadeRight,bounceIn,bounceOut,zoomIn,zoomOut|}}",
+      "$0",
+      ":::"
+    ],
+    "description": "Insert a block-level fragment with animation."
+  },
+  "Inline Fragment": {
+    "prefix": "inline",
+    "body": [
+      "[${1:text}]{.fragment .${2|fadeIn,fadeOut,bounceIn,zoomIn,slideInUp|}}"
+    ],
+    "description": "Insert an inline fragment with animation."
+  },
+  "Header Fragment": {
+    "prefix": "header",
+    "body": [
+      "## ${1:Slide Title} {.fragment .${2|fadeIn,bounceIn,zoomIn|}}"
+    ],
+    "description": "Insert a header with fragment animation."
+  },
+  "Whole-Slide Fragment": {
+    "prefix": "whole-slide",
+    "body": [
+      "## ${1:Slide Title} {.fragment .whole-slide .${2|fadeIn,bounceIn,zoomIn|}}"
+    ],
+    "description": "Insert a whole-slide fragment that animates header and content together."
+  },
+  "Letter-by-Letter Fragment": {
+    "prefix": "letters",
+    "body": [
+      "[${1:text}]{.fragment .letters .${2|fadeIn,bounceIn,zoomIn|}}"
+    ],
+    "description": "Insert a letter-by-letter animated fragment."
+  }
+}

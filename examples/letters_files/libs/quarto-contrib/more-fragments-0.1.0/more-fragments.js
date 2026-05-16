@@ -6,7 +6,9 @@
   // ==========================================================================
 
   const LETTER_DELAY_MS = 50;  // Default delay between letters
+  const WORD_DELAY_MS = 150;   // Default delay between words
 
+  // letter-* speed classes are shared by both letter and word containers
   const LETTER_DELAYS = {
     'letter-faster': 20,
     'letter-fast': 35,
@@ -14,33 +16,41 @@
     'letter-slower': 120
   };
 
-  // Get delay for a letter fragment
-  function getLetterDelay(element) {
+  // Get delay for a letter/word fragment
+  function getUnitDelay(element, defaultDelay) {
     for (const [cls, delay] of Object.entries(LETTER_DELAYS)) {
       if (element.classList.contains(cls)) {
         return delay;
       }
     }
-    return LETTER_DELAY_MS;
+    return defaultDelay;
   }
 
-  // Check if this is a letter container fragment
+  // Check if this is a letter or word container fragment
   function isLetterContainer(element) {
     return element.classList.contains('letter-container');
   }
+  function isWordContainer(element) {
+    return element.classList.contains('word-container');
+  }
+  function isUnitContainer(element) {
+    return isLetterContainer(element) || isWordContainer(element);
+  }
 
-  // Get all letter characters in a container, sorted by index
-  function getLettersInContainer(container) {
-    const letters = Array.from(container.querySelectorAll('.letter-char'));
+  // Get all units (letters or words) in a container, sorted by index
+  function getUnitsInContainer(container) {
+    const isWords = isWordContainer(container);
+    const unitSelector = isWords ? '.word-char' : '.letter-char';
+    const indexAttr = isWords ? 'data-word-index' : 'data-letter-index';
+    const units = Array.from(container.querySelectorAll(unitSelector));
 
-    // Sort by letter-index
-    letters.sort((a, b) => {
-      const aIdx = parseInt(a.getAttribute('data-letter-index') || '0');
-      const bIdx = parseInt(b.getAttribute('data-letter-index') || '0');
+    units.sort((a, b) => {
+      const aIdx = parseInt(a.getAttribute(indexAttr) || '0');
+      const bIdx = parseInt(b.getAttribute(indexAttr) || '0');
       return aIdx - bIdx;
     });
 
-    return letters;
+    return units;
   }
 
   // ==========================================================================
@@ -297,20 +307,22 @@
     Reveal.on('fragmentshown', function(event) {
       const fragment = event.fragment;
 
-      // Handle letter-by-letter animations (container-based)
-      if (isLetterContainer(fragment)) {
-        const letters = getLettersInContainer(fragment);
-        if (letters.length === 0) return;
+      // Handle letter-by-letter or word-by-word animations (container-based)
+      if (isUnitContainer(fragment)) {
+        const isWords = isWordContainer(fragment);
+        const units = getUnitsInContainer(fragment);
+        if (units.length === 0) return;
 
-        const delay = getLetterDelay(fragment);
+        const delay = getUnitDelay(fragment, isWords ? WORD_DELAY_MS : LETTER_DELAY_MS);
+        const visibleClass = isWords ? 'word-visible' : 'letter-visible';
 
-        letters.forEach(function(letter, index) {
+        units.forEach(function(unit, index) {
           setTimeout(function() {
-            const animClass = getAnimationClass(letter);
+            const animClass = getAnimationClass(unit);
             if (animClass && animationPairs[animClass]) {
-              applyAnimation(letter, animClass, false);
+              applyAnimation(unit, animClass, false);
             }
-            letter.classList.add('letter-visible');
+            unit.classList.add(visibleClass);
           }, index * delay);
         });
         return;
@@ -331,23 +343,24 @@
     Reveal.on('fragmenthidden', function(event) {
       const fragment = event.fragment;
 
-      // Handle letter-by-letter animations (reverse order, container-based)
-      if (isLetterContainer(fragment)) {
-        const letters = getLettersInContainer(fragment);
-        if (letters.length === 0) return;
+      // Handle letter-by-letter or word-by-word animations (reverse order)
+      if (isUnitContainer(fragment)) {
+        const isWords = isWordContainer(fragment);
+        const units = getUnitsInContainer(fragment);
+        if (units.length === 0) return;
 
-        const delay = getLetterDelay(fragment);
+        const delay = getUnitDelay(fragment, isWords ? WORD_DELAY_MS : LETTER_DELAY_MS);
+        const visibleClass = isWords ? 'word-visible' : 'letter-visible';
 
-        // Reverse the array for backwards animation
-        const reversedLetters = [...letters].reverse();
+        const reversedUnits = [...units].reverse();
 
-        reversedLetters.forEach(function(letter, index) {
+        reversedUnits.forEach(function(unit, index) {
           setTimeout(function() {
-            const animClass = getAnimationClass(letter);
+            const animClass = getAnimationClass(unit);
             if (animClass && animationPairs[animClass]) {
-              applyAnimation(letter, animationPairs[animClass], true);
+              applyAnimation(unit, animationPairs[animClass], true);
             }
-            letter.classList.remove('letter-visible');
+            unit.classList.remove(visibleClass);
           }, index * delay);
         });
         return;

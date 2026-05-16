@@ -1,0 +1,74 @@
+---
+title: "Word-by-Word Animations"
+subtitle: "Word-by-word reveal effects"
+format: revealjs
+filters:
+  - ../_extensions/more-fragments/more-fragments.lua
+---
+
+## Basic Word Animation
+
+Text animates word by word with a single click:
+
+[Hello beautiful world]{.fragment .words .bounceIn}
+
+[Welcome to RevealJS slides]{.fragment .words .fadeIn}
+
+## Basic Usage
+
+```markdown
+[Hello beautiful world]{.fragment .words .bounceIn}
+
+[Welcome to RevealJS slides]{.fragment .words .fadeIn}
+```
+
+Use `.fragment .words` with any animation class.
+
+## Word Animation Speeds
+
+Control the stagger delay between words (reuses the `letter-*` speed classes
+with word-appropriate timings):
+
+[Faster (60ms)]{.fragment .words .fadeIn .letter-faster}
+
+[Fast (100ms)]{.fragment .words .fadeIn .letter-fast}
+
+[Default (150ms)]{.fragment .words .fadeIn}
+
+[Slow (250ms)]{.fragment .words .fadeIn .letter-slow}
+
+[Slower (400ms)]{.fragment .words .fadeIn .letter-slower}
+
+## Speed Classes
+
+| Class | Delay |
+|-------|-------|
+| `letter-faster` | 60ms |
+| `letter-fast` | 100ms |
+| (default) | 150ms |
+| `letter-slow` | 250ms |
+| `letter-slower` | 400ms |
+
+## Different Animation Styles
+
+Various animations work with words:
+
+[Bounce in here]{.fragment .words .bounceIn}
+
+[Zoom into focus]{.fragment .words .zoomIn}
+
+[Slide from the left]{.fragment .words .slideInLeft}
+
+[Rotate into place]{.fragment .words .rotateIn}
+
+# Header Animation {.fragment .words .bounceIn}
+
+Word-by-word works on headers too!
+
+## Header Syntax
+
+```markdown
+# Title goes here {.fragment .words .bounceIn}
+
+## Section header text {.fragment .words .zoomIn .letter-fast}
+```

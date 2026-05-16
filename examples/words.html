@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="letters_files/libs/clipboard/clipboard.min.js"></script>
-<script src="letters_files/libs/quarto-html/tabby.min.js"></script>
-<script src="letters_files/libs/quarto-html/popper.min.js"></script>
-<script src="letters_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="letters_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="letters_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="letters_files/libs/quarto-html/quarto-syntax-highlighting-f48cb789c6bab3b4303eaeba73647581.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="letters_files/libs/quarto-contrib/more-fragments-0.1.0/more-fragments.js"></script>
-<link href="letters_files/libs/quarto-contrib/more-fragments-0.1.0/animate.min.css" rel="stylesheet">
-<link href="letters_files/libs/quarto-contrib/more-fragments-0.1.0/magic.min.css" rel="stylesheet">
-<link href="letters_files/libs/quarto-contrib/more-fragments-0.1.0/more-fragments.css" rel="stylesheet"><meta charset="utf-8">
+<script src="words_files/libs/clipboard/clipboard.min.js"></script>
+<script src="words_files/libs/quarto-html/tabby.min.js"></script>
+<script src="words_files/libs/quarto-html/popper.min.js"></script>
+<script src="words_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="words_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="words_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="words_files/libs/quarto-html/quarto-syntax-highlighting-f48cb789c6bab3b4303eaeba73647581.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="words_files/libs/quarto-contrib/more-fragments-0.1.0/more-fragments.js"></script>
+<link href="words_files/libs/quarto-contrib/more-fragments-0.1.0/animate.min.css" rel="stylesheet">
+<link href="words_files/libs/quarto-contrib/more-fragments-0.1.0/magic.min.css" rel="stylesheet">
+<link href="words_files/libs/quarto-contrib/more-fragments-0.1.0/more-fragments.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.35">
 
-  <title>Letter-by-Letter Animations</title>
+  <title>Word-by-Word Animations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="letters_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="letters_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="words_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="words_files/libs/revealjs/dist/reveal.css">
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -101,11 +101,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="letters_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
-  <link href="letters_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="letters_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="letters_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="letters_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="words_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link href="words_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="words_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="words_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="words_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -199,42 +199,37 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Letter-by-Letter Animations</h1>
-  <p class="subtitle">Character-by-character reveal effects</p>
+  <h1 class="title">Word-by-Word Animations</h1>
+  <p class="subtitle">Word-by-word reveal effects</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="basic-letter-animation" class="slide level2">
-<h2>Basic Letter Animation</h2>
-<p>Text animates letter by letter with a single click:</p>
-<p><span class="fragment letter-container bounceIn"><span class="letter-char bounceIn" data-letter-index="0">H</span><span class="letter-char bounceIn" data-letter-index="1">e</span><span class="letter-char bounceIn" data-letter-index="2">l</span><span class="letter-char bounceIn" data-letter-index="3">l</span><span class="letter-char bounceIn" data-letter-index="4">o</span> <span class="letter-char bounceIn" data-letter-index="5">W</span><span class="letter-char bounceIn" data-letter-index="6">o</span><span class="letter-char bounceIn" data-letter-index="7">r</span><span class="letter-char bounceIn" data-letter-index="8">l</span><span class="letter-char bounceIn" data-letter-index="9">d</span></span></p>
-<p><span class="fragment letter-container fadeIn"><span class="letter-char fadeIn" data-letter-index="0">W</span><span class="letter-char fadeIn" data-letter-index="1">e</span><span class="letter-char fadeIn" data-letter-index="2">l</span><span class="letter-char fadeIn" data-letter-index="3">c</span><span class="letter-char fadeIn" data-letter-index="4">o</span><span class="letter-char fadeIn" data-letter-index="5">m</span><span class="letter-char fadeIn" data-letter-index="6">e</span> <span class="letter-char fadeIn" data-letter-index="7">t</span><span class="letter-char fadeIn" data-letter-index="8">o</span> <span class="letter-char fadeIn" data-letter-index="9">R</span><span class="letter-char fadeIn" data-letter-index="10">e</span><span class="letter-char fadeIn" data-letter-index="11">v</span><span class="letter-char fadeIn" data-letter-index="12">e</span><span class="letter-char fadeIn" data-letter-index="13">a</span><span class="letter-char fadeIn" data-letter-index="14">l</span><span class="letter-char fadeIn" data-letter-index="15">J</span><span class="letter-char fadeIn" data-letter-index="16">S</span></span></p>
+<section id="basic-word-animation" class="slide level2">
+<h2>Basic Word Animation</h2>
+<p>Text animates word by word with a single click:</p>
+<p><span class="fragment word-container bounceIn"><span class="word-char bounceIn" data-word-index="0">Hello</span> <span class="word-char bounceIn" data-word-index="1">beautiful</span> <span class="word-char bounceIn" data-word-index="2">world</span></span></p>
+<p><span class="fragment word-container fadeIn"><span class="word-char fadeIn" data-word-index="0">Welcome</span> <span class="word-char fadeIn" data-word-index="1">to</span> <span class="word-char fadeIn" data-word-index="2">RevealJS</span> <span class="word-char fadeIn" data-word-index="3">slides</span></span></p>
 </section>
 <section id="basic-usage" class="slide level2">
 <h2>Basic Usage</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href=""></a><span class="co">[</span><span class="ot">Hello World</span><span class="co">]</span>{.fragment .letters .bounceIn}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href=""></a><span class="co">[</span><span class="ot">Hello beautiful world</span><span class="co">]</span>{.fragment .words .bounceIn}</span>
 <span id="cb1-2"><a href=""></a></span>
-<span id="cb1-3"><a href=""></a><span class="co">[</span><span class="ot">Welcome to RevealJS</span><span class="co">]</span>{.fragment .letters .fadeIn}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Use <code>.fragment .letters</code> with any animation class.</p>
+<span id="cb1-3"><a href=""></a><span class="co">[</span><span class="ot">Welcome to RevealJS slides</span><span class="co">]</span>{.fragment .words .fadeIn}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use <code>.fragment .words</code> with any animation class.</p>
 </section>
-<section id="letter-animation-speeds" class="slide level2">
-<h2>Letter Animation Speeds</h2>
-<p>Control the stagger delay between letters:</p>
-<p><span class="fragment letter-container fadeIn letter-faster"><span class="letter-char fadeIn" data-letter-index="0">F</span><span class="letter-char fadeIn" data-letter-index="1">a</span><span class="letter-char fadeIn" data-letter-index="2">s</span><span class="letter-char fadeIn" data-letter-index="3">t</span><span class="letter-char fadeIn" data-letter-index="4">e</span><span class="letter-char fadeIn" data-letter-index="5">r</span> <span class="letter-char fadeIn" data-letter-index="6">(</span><span class="letter-char fadeIn" data-letter-index="7">2</span><span class="letter-char fadeIn" data-letter-index="8">0</span><span class="letter-char fadeIn" data-letter-index="9">m</span><span class="letter-char fadeIn" data-letter-index="10">s</span><span class="letter-char fadeIn" data-letter-index="11">)</span></span></p>
-<p><span class="fragment letter-container fadeIn letter-fast"><span class="letter-char fadeIn" data-letter-index="0">F</span><span class="letter-char fadeIn" data-letter-index="1">a</span><span class="letter-char fadeIn" data-letter-index="2">s</span><span class="letter-char fadeIn" data-letter-index="3">t</span> <span class="letter-char fadeIn" data-letter-index="4">(</span><span class="letter-char fadeIn" data-letter-index="5">3</span><span class="letter-char fadeIn" data-letter-index="6">5</span><span class="letter-char fadeIn" data-letter-index="7">m</span><span class="letter-char fadeIn" data-letter-index="8">s</span><span class="letter-char fadeIn" data-letter-index="9">)</span></span></p>
-<p><span class="fragment letter-container fadeIn"><span class="letter-char fadeIn" data-letter-index="0">D</span><span class="letter-char fadeIn" data-letter-index="1">e</span><span class="letter-char fadeIn" data-letter-index="2">f</span><span class="letter-char fadeIn" data-letter-index="3">a</span><span class="letter-char fadeIn" data-letter-index="4">u</span><span class="letter-char fadeIn" data-letter-index="5">l</span><span class="letter-char fadeIn" data-letter-index="6">t</span> <span class="letter-char fadeIn" data-letter-index="7">(</span><span class="letter-char fadeIn" data-letter-index="8">5</span><span class="letter-char fadeIn" data-letter-index="9">0</span><span class="letter-char fadeIn" data-letter-index="10">m</span><span class="letter-char fadeIn" data-letter-index="11">s</span><span class="letter-char fadeIn" data-letter-index="12">)</span></span></p>
-<p><span class="fragment letter-container fadeIn letter-slow"><span class="letter-char fadeIn" data-letter-index="0">S</span><span class="letter-char fadeIn" data-letter-index="1">l</span><span class="letter-char fadeIn" data-letter-index="2">o</span><span class="letter-char fadeIn" data-letter-index="3">w</span> <span class="letter-char fadeIn" data-letter-index="4">(</span><span class="letter-char fadeIn" data-letter-index="5">8</span><span class="letter-char fadeIn" data-letter-index="6">0</span><span class="letter-char fadeIn" data-letter-index="7">m</span><span class="letter-char fadeIn" data-letter-index="8">s</span><span class="letter-char fadeIn" data-letter-index="9">)</span></span></p>
-<p><span class="fragment letter-container fadeIn letter-slower"><span class="letter-char fadeIn" data-letter-index="0">S</span><span class="letter-char fadeIn" data-letter-index="1">l</span><span class="letter-char fadeIn" data-letter-index="2">o</span><span class="letter-char fadeIn" data-letter-index="3">w</span><span class="letter-char fadeIn" data-letter-index="4">e</span><span class="letter-char fadeIn" data-letter-index="5">r</span> <span class="letter-char fadeIn" data-letter-index="6">(</span><span class="letter-char fadeIn" data-letter-index="7">1</span><span class="letter-char fadeIn" data-letter-index="8">2</span><span class="letter-char fadeIn" data-letter-index="9">0</span><span class="letter-char fadeIn" data-letter-index="10">m</span><span class="letter-char fadeIn" data-letter-index="11">s</span><span class="letter-char fadeIn" data-letter-index="12">)</span></span></p>
+<section id="word-animation-speeds" class="slide level2">
+<h2>Word Animation Speeds</h2>
+<p>Control the stagger delay between words (reuses the <code>letter-*</code> speed classes with word-appropriate timings):</p>
+<p><span class="fragment word-container fadeIn letter-faster"><span class="word-char fadeIn" data-word-index="0">Faster</span> <span class="word-char fadeIn" data-word-index="1">(60ms)</span></span></p>
+<p><span class="fragment word-container fadeIn letter-fast"><span class="word-char fadeIn" data-word-index="0">Fast</span> <span class="word-char fadeIn" data-word-index="1">(100ms)</span></span></p>
+<p><span class="fragment word-container fadeIn"><span class="word-char fadeIn" data-word-index="0">Default</span> <span class="word-char fadeIn" data-word-index="1">(150ms)</span></span></p>
+<p><span class="fragment word-container fadeIn letter-slow"><span class="word-char fadeIn" data-word-index="0">Slow</span> <span class="word-char fadeIn" data-word-index="1">(250ms)</span></span></p>
+<p><span class="fragment word-container fadeIn letter-slower"><span class="word-char fadeIn" data-word-index="0">Slower</span> <span class="word-char fadeIn" data-word-index="1">(400ms)</span></span></p>
 </section>
 <section id="speed-classes" class="slide level2">
 <h2>Speed Classes</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href=""></a><span class="co">[</span><span class="ot">Faster</span><span class="co">]</span>{.fragment .letters .fadeIn .letter-faster}</span>
-<span id="cb2-2"><a href=""></a><span class="co">[</span><span class="ot">Fast</span><span class="co">]</span>{.fragment .letters .fadeIn .letter-fast}</span>
-<span id="cb2-3"><a href=""></a><span class="co">[</span><span class="ot">Default</span><span class="co">]</span>{.fragment .letters .fadeIn}</span>
-<span id="cb2-4"><a href=""></a><span class="co">[</span><span class="ot">Slow</span><span class="co">]</span>{.fragment .letters .fadeIn .letter-slow}</span>
-<span id="cb2-5"><a href=""></a><span class="co">[</span><span class="ot">Slower</span><span class="co">]</span>{.fragment .letters .fadeIn .letter-slower}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -245,76 +240,45 @@
 <tbody>
 <tr class="odd">
 <td><code>letter-faster</code></td>
-<td>20ms</td>
+<td>60ms</td>
 </tr>
 <tr class="even">
 <td><code>letter-fast</code></td>
-<td>35ms</td>
+<td>100ms</td>
 </tr>
 <tr class="odd">
 <td>(default)</td>
-<td>50ms</td>
+<td>150ms</td>
 </tr>
 <tr class="even">
 <td><code>letter-slow</code></td>
-<td>80ms</td>
+<td>250ms</td>
 </tr>
 <tr class="odd">
 <td><code>letter-slower</code></td>
-<td>120ms</td>
+<td>400ms</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="different-animation-styles" class="slide level2">
 <h2>Different Animation Styles</h2>
-<p>Various animations work with letters:</p>
-<p><span class="fragment letter-container bounceIn"><span class="letter-char bounceIn" data-letter-index="0">B</span><span class="letter-char bounceIn" data-letter-index="1">o</span><span class="letter-char bounceIn" data-letter-index="2">u</span><span class="letter-char bounceIn" data-letter-index="3">n</span><span class="letter-char bounceIn" data-letter-index="4">c</span><span class="letter-char bounceIn" data-letter-index="5">e</span> <span class="letter-char bounceIn" data-letter-index="6">e</span><span class="letter-char bounceIn" data-letter-index="7">f</span><span class="letter-char bounceIn" data-letter-index="8">f</span><span class="letter-char bounceIn" data-letter-index="9">e</span><span class="letter-char bounceIn" data-letter-index="10">c</span><span class="letter-char bounceIn" data-letter-index="11">t</span></span></p>
-<p><span class="fragment letter-container zoomIn"><span class="letter-char zoomIn" data-letter-index="0">Z</span><span class="letter-char zoomIn" data-letter-index="1">o</span><span class="letter-char zoomIn" data-letter-index="2">o</span><span class="letter-char zoomIn" data-letter-index="3">m</span> <span class="letter-char zoomIn" data-letter-index="4">f</span><span class="letter-char zoomIn" data-letter-index="5">r</span><span class="letter-char zoomIn" data-letter-index="6">o</span><span class="letter-char zoomIn" data-letter-index="7">m</span> <span class="letter-char zoomIn" data-letter-index="8">s</span><span class="letter-char zoomIn" data-letter-index="9">m</span><span class="letter-char zoomIn" data-letter-index="10">a</span><span class="letter-char zoomIn" data-letter-index="11">l</span><span class="letter-char zoomIn" data-letter-index="12">l</span></span></p>
-<p><span class="fragment letter-container slideInLeft"><span class="letter-char slideInLeft" data-letter-index="0">S</span><span class="letter-char slideInLeft" data-letter-index="1">l</span><span class="letter-char slideInLeft" data-letter-index="2">i</span><span class="letter-char slideInLeft" data-letter-index="3">d</span><span class="letter-char slideInLeft" data-letter-index="4">e</span> <span class="letter-char slideInLeft" data-letter-index="5">f</span><span class="letter-char slideInLeft" data-letter-index="6">r</span><span class="letter-char slideInLeft" data-letter-index="7">o</span><span class="letter-char slideInLeft" data-letter-index="8">m</span> <span class="letter-char slideInLeft" data-letter-index="9">l</span><span class="letter-char slideInLeft" data-letter-index="10">e</span><span class="letter-char slideInLeft" data-letter-index="11">f</span><span class="letter-char slideInLeft" data-letter-index="12">t</span></span></p>
-<p><span class="fragment letter-container rotateIn"><span class="letter-char rotateIn" data-letter-index="0">R</span><span class="letter-char rotateIn" data-letter-index="1">o</span><span class="letter-char rotateIn" data-letter-index="2">t</span><span class="letter-char rotateIn" data-letter-index="3">a</span><span class="letter-char rotateIn" data-letter-index="4">t</span><span class="letter-char rotateIn" data-letter-index="5">e</span> <span class="letter-char rotateIn" data-letter-index="6">i</span><span class="letter-char rotateIn" data-letter-index="7">n</span></span></p>
-</section>
-<section id="animation-examples" class="slide level2">
-<h2>Animation Examples</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href=""></a><span class="co">[</span><span class="ot">Bounce</span><span class="co">]</span>{.fragment .letters .bounceIn}</span>
-<span id="cb3-2"><a href=""></a><span class="co">[</span><span class="ot">Zoom</span><span class="co">]</span>{.fragment .letters .zoomIn}</span>
-<span id="cb3-3"><a href=""></a><span class="co">[</span><span class="ot">Slide</span><span class="co">]</span>{.fragment .letters .slideInLeft}</span>
-<span id="cb3-4"><a href=""></a><span class="co">[</span><span class="ot">Rotate</span><span class="co">]</span>{.fragment .letters .rotateIn}</span>
-<span id="cb3-5"><a href=""></a><span class="co">[</span><span class="ot">Fade</span><span class="co">]</span>{.fragment .letters .fadeInUp}</span>
-<span id="cb3-6"><a href=""></a><span class="co">[</span><span class="ot">Back</span><span class="co">]</span>{.fragment .letters .backInDown}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Any Animate.css animation works!</p>
-</section>
-<section id="combining-speed-utilities" class="slide level2">
-<h2>Combining Speed Utilities</h2>
-<p>Letter stagger + animation duration:</p>
-<p><span class="fragment letter-container bounceIn letter-fast"><span class="letter-char bounceIn faster" data-letter-index="0">Q</span><span class="letter-char bounceIn faster" data-letter-index="1">u</span><span class="letter-char bounceIn faster" data-letter-index="2">i</span><span class="letter-char bounceIn faster" data-letter-index="3">c</span><span class="letter-char bounceIn faster" data-letter-index="4">k</span> <span class="letter-char bounceIn faster" data-letter-index="5">b</span><span class="letter-char bounceIn faster" data-letter-index="6">o</span><span class="letter-char bounceIn faster" data-letter-index="7">u</span><span class="letter-char bounceIn faster" data-letter-index="8">n</span><span class="letter-char bounceIn faster" data-letter-index="9">c</span><span class="letter-char bounceIn faster" data-letter-index="10">e</span></span></p>
-<p><span class="fragment letter-container zoomIn letter-slower"><span class="letter-char zoomIn slow" data-letter-index="0">S</span><span class="letter-char zoomIn slow" data-letter-index="1">l</span><span class="letter-char zoomIn slow" data-letter-index="2">o</span><span class="letter-char zoomIn slow" data-letter-index="3">w</span> <span class="letter-char zoomIn slow" data-letter-index="4">d</span><span class="letter-char zoomIn slow" data-letter-index="5">r</span><span class="letter-char zoomIn slow" data-letter-index="6">a</span><span class="letter-char zoomIn slow" data-letter-index="7">m</span><span class="letter-char zoomIn slow" data-letter-index="8">a</span><span class="letter-char zoomIn slow" data-letter-index="9">t</span><span class="letter-char zoomIn slow" data-letter-index="10">i</span><span class="letter-char zoomIn slow" data-letter-index="11">c</span> <span class="letter-char zoomIn slow" data-letter-index="12">z</span><span class="letter-char zoomIn slow" data-letter-index="13">o</span><span class="letter-char zoomIn slow" data-letter-index="14">o</span><span class="letter-char zoomIn slow" data-letter-index="15">m</span></span></p>
-</section>
-<section id="combined-speed-syntax" class="slide level2">
-<h2>Combined Speed Syntax</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href=""></a><span class="co">[</span><span class="ot">Quick bounce</span><span class="co">]</span>{.fragment .letters .bounceIn .faster .letter-fast}</span>
-<span id="cb4-2"><a href=""></a></span>
-<span id="cb4-3"><a href=""></a><span class="co">[</span><span class="ot">Slow zoom</span><span class="co">]</span>{.fragment .letters .zoomIn .slow .letter-slower}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><code>letter-*</code> = delay between letters starting</li>
-<li><code>faster</code>/<code>slow</code> = animation duration per letter</li>
-</ul>
+<p>Various animations work with words:</p>
+<p><span class="fragment word-container bounceIn"><span class="word-char bounceIn" data-word-index="0">Bounce</span> <span class="word-char bounceIn" data-word-index="1">in</span> <span class="word-char bounceIn" data-word-index="2">here</span></span></p>
+<p><span class="fragment word-container zoomIn"><span class="word-char zoomIn" data-word-index="0">Zoom</span> <span class="word-char zoomIn" data-word-index="1">into</span> <span class="word-char zoomIn" data-word-index="2">focus</span></span></p>
+<p><span class="fragment word-container slideInLeft"><span class="word-char slideInLeft" data-word-index="0">Slide</span> <span class="word-char slideInLeft" data-word-index="1">from</span> <span class="word-char slideInLeft" data-word-index="2">the</span> <span class="word-char slideInLeft" data-word-index="3">left</span></span></p>
+<p><span class="fragment word-container rotateIn"><span class="word-char rotateIn" data-word-index="0">Rotate</span> <span class="word-char rotateIn" data-word-index="1">into</span> <span class="word-char rotateIn" data-word-index="2">place</span></span></p>
 </section>
 <section>
 <section id="header-animation" class="title-slide slide level1 center">
-<h1><span class="fragment letter-container bounceIn"><span class="letter-char bounceIn" data-letter-index="0">H</span><span class="letter-char bounceIn" data-letter-index="1">e</span><span class="letter-char bounceIn" data-letter-index="2">a</span><span class="letter-char bounceIn" data-letter-index="3">d</span><span class="letter-char bounceIn" data-letter-index="4">e</span><span class="letter-char bounceIn" data-letter-index="5">r</span> <span class="letter-char bounceIn" data-letter-index="6">A</span><span class="letter-char bounceIn" data-letter-index="7">n</span><span class="letter-char bounceIn" data-letter-index="8">i</span><span class="letter-char bounceIn" data-letter-index="9">m</span><span class="letter-char bounceIn" data-letter-index="10">a</span><span class="letter-char bounceIn" data-letter-index="11">t</span><span class="letter-char bounceIn" data-letter-index="12">i</span><span class="letter-char bounceIn" data-letter-index="13">o</span><span class="letter-char bounceIn" data-letter-index="14">n</span></span></h1>
-<p>Letter-by-letter works on headers too!</p>
+<h1><span class="fragment word-container bounceIn"><span class="word-char bounceIn" data-word-index="0">Header</span> <span class="word-char bounceIn" data-word-index="1">Animation</span></span></h1>
+<p>Word-by-word works on headers too!</p>
 </section>
 <section id="header-syntax" class="slide level2">
 <h2>Header Syntax</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href=""></a><span class="fu"># Title {.fragment .letters .bounceIn}</span></span>
-<span id="cb5-2"><a href=""></a></span>
-<span id="cb5-3"><a href=""></a><span class="fu">## Subtitle {.fragment .letters .zoomIn .letter-fast}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Same syntax as inline, just on the header line.</p>
-</section>
-<section id="another-header" class="slide level2">
-<h2><span class="fragment letter-container zoomIn letter-fast"><span class="letter-char zoomIn" data-letter-index="0">A</span><span class="letter-char zoomIn" data-letter-index="1">n</span><span class="letter-char zoomIn" data-letter-index="2">o</span><span class="letter-char zoomIn" data-letter-index="3">t</span><span class="letter-char zoomIn" data-letter-index="4">h</span><span class="letter-char zoomIn" data-letter-index="5">e</span><span class="letter-char zoomIn" data-letter-index="6">r</span> <span class="letter-char zoomIn" data-letter-index="7">H</span><span class="letter-char zoomIn" data-letter-index="8">e</span><span class="letter-char zoomIn" data-letter-index="9">a</span><span class="letter-char zoomIn" data-letter-index="10">d</span><span class="letter-char zoomIn" data-letter-index="11">e</span><span class="letter-char zoomIn" data-letter-index="12">r</span></span></h2>
-<p>Headers support all the same options.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href=""></a><span class="fu"># Title goes here {.fragment .words .bounceIn}</span></span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a><span class="fu">## Section header text {.fragment .words .zoomIn .letter-fast}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </section></section>
     </div>
@@ -325,19 +289,19 @@
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="letters_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="words_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="letters_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="letters_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="letters_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="letters_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="letters_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="words_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="words_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="words_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="words_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="words_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="letters_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="letters_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="letters_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="letters_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="words_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="words_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="words_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="words_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

@@ -737,6 +737,94 @@
 /* Delays: 20ms, 35ms, 80ms, 120ms (default is 50ms) */
 
 /* ==========================================================================
+   Word-by-Word Animations
+   ========================================================================== */
+
+/* Container for word animations - this is the fragment */
+.reveal .slides section .word-container {
+  display: inline;
+  white-space: pre-wrap;
+}
+
+/* Override default fragment visibility for word containers */
+.reveal .slides section .word-container.fragment {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Individual word units - inline-block for transforms */
+.reveal .slides section .word-char {
+  display: inline-block;
+}
+
+/* Initial hidden state for word entrance animations */
+.reveal .slides section .word-char.bounceIn,
+.reveal .slides section .word-char.bounceInDown,
+.reveal .slides section .word-char.bounceInLeft,
+.reveal .slides section .word-char.bounceInRight,
+.reveal .slides section .word-char.bounceInUp,
+.reveal .slides section .word-char.fadeIn,
+.reveal .slides section .word-char.fadeInDown,
+.reveal .slides section .word-char.fadeInDownBig,
+.reveal .slides section .word-char.fadeInLeft,
+.reveal .slides section .word-char.fadeInLeftBig,
+.reveal .slides section .word-char.fadeInRight,
+.reveal .slides section .word-char.fadeInRightBig,
+.reveal .slides section .word-char.fadeInUp,
+.reveal .slides section .word-char.fadeInUpBig,
+.reveal .slides section .word-char.fadeInTopLeft,
+.reveal .slides section .word-char.fadeInTopRight,
+.reveal .slides section .word-char.fadeInBottomLeft,
+.reveal .slides section .word-char.fadeInBottomRight,
+.reveal .slides section .word-char.zoomIn,
+.reveal .slides section .word-char.zoomInDown,
+.reveal .slides section .word-char.zoomInLeft,
+.reveal .slides section .word-char.zoomInRight,
+.reveal .slides section .word-char.zoomInUp,
+.reveal .slides section .word-char.rotateIn,
+.reveal .slides section .word-char.rotateInDownLeft,
+.reveal .slides section .word-char.rotateInDownRight,
+.reveal .slides section .word-char.rotateInUpLeft,
+.reveal .slides section .word-char.rotateInUpRight,
+.reveal .slides section .word-char.slideInDown,
+.reveal .slides section .word-char.slideInLeft,
+.reveal .slides section .word-char.slideInRight,
+.reveal .slides section .word-char.slideInUp,
+.reveal .slides section .word-char.backInDown,
+.reveal .slides section .word-char.backInLeft,
+.reveal .slides section .word-char.backInRight,
+.reveal .slides section .word-char.backInUp,
+.reveal .slides section .word-char.flipInX,
+.reveal .slides section .word-char.flipInY,
+.reveal .slides section .word-char.lightSpeedInLeft,
+.reveal .slides section .word-char.lightSpeedInRight,
+.reveal .slides section .word-char.jackInTheBox,
+.reveal .slides section .word-char.rollIn,
+.reveal .slides section .word-char.puffIn,
+.reveal .slides section .word-char.vanishIn,
+.reveal .slides section .word-char.perspectiveDownReturn,
+.reveal .slides section .word-char.perspectiveUpReturn,
+.reveal .slides section .word-char.perspectiveLeftReturn,
+.reveal .slides section .word-char.perspectiveRightReturn,
+.reveal .slides section .word-char.spaceInDown,
+.reveal .slides section .word-char.spaceInUp,
+.reveal .slides section .word-char.spaceInLeft,
+.reveal .slides section .word-char.spaceInRight,
+.reveal .slides section .word-char.boingInUp,
+.reveal .slides section .word-char.swashIn,
+.reveal .slides section .word-char.tinDownIn,
+.reveal .slides section .word-char.tinUpIn,
+.reveal .slides section .word-char.tinLeftIn,
+.reveal .slides section .word-char.tinRightIn {
+  opacity: 0;
+}
+
+/* Visible state for word units */
+.reveal .slides section .word-char.word-visible {
+  opacity: 1;
+}
+
+/* ==========================================================================
    Magic.css Animations
    From: https://www.minimamente.com/project/magic/ (MIT License)
    ========================================================================== */

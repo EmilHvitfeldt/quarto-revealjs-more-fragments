@@ -4,6 +4,8 @@ An [Quarto](https://quarto.org/) revealjs extension that uses [Animate.css](http
 
 **[View Documentation & Live Examples](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/)**
 
+![](more-fragments.webp)
+
 ## Installation
 
 To install this extension in your current directory (or into the Quarto project that you're currently working in), use the following command:
